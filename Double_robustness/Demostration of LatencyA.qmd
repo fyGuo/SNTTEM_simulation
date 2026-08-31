@@ -1,0 +1,104 @@
+---
+title: "Demonstration of LatencyA"
+format: html
+editor: visual
+---
+
+## Demonstration of "LatencyA"
+
+The package "LatencyA" is developed for analysis in longitudinal and/or survival studies. The core idea of the package is to use some parametric functions to model the coefficients for a set of correlated variables in a regression. These set of correlated variables are usually exposures measured in different time, i.e. lagged exposures. Because of the high correlation across these variables, the usual regression coefficients can be unstable. Introducing parametric restrictions for these coefficients is a practical solution.
+
+## Installation
+
+The package is still on github. To install it, please run the code below,
+
+```{r}
+library(devtools)
+install_github("fyGuo/LatencyA")
+library(LatencyA)
+```
+
+## The demo data
+
+Please run the code below to see the required data format for the package
+
+```{r}
+## sim_data is an exmaple data for the package
+head(sim_data)
+```
+
+The data is orgnazied in a \`\`long'' format, that is usually required for a time-varying Cox regression and/or mixed-effect models or gee. Each row represents a person-time data, it contains,
+
+-   id: the person id
+-   age_start: the starting age of the time interval
+-   age_end: the ending age of the time interval
+-   lag0 to lag30: the lagged expoures from lag0 (current exposure) to lag30 (exposure 30 periods ago).
+-   failure: the event indicator (1 for event, 0 for censored)
+
+I did not show the other covariates in the data, but they can be easily added to the data frame. I will do such an example in the following analysis.
+
+## Core functions
+
+There are two core functions in the package, namely, - CoxNCSpline: use a natural cubic spline to model the coefficients for the exposures. - CoxPoly: use a set of othonogonal polynomials to model the coefficients for the exposures.
+
+I recommend using CoxNCSpline, see the following example
+
+```{r}
+time_start <- "age_start"
+time_end <- "age_end"
+status <- "failure"
+exposure <- paste0("lag", 0:19)
+knots_number <- 3
+latency <- 20
+# fit the model
+# it requires data, names of the start time, end time, status, exposure variables, number of knots for the natural cubic spline, and the maximum latency
+fit <- CoxNCSpline(sim_data, time_start, time_end, status, exposure, knots_number, latency)
+
+# extract the estimated log hazard ratio and its variance at lag = 15
+extract_CoxNCSpline(fit, lag = 15, latency = 20)
+```
+
+Usually whenever fitting natural cubic splines, the hyper-parameter `knots_number` is required, and has to be somehow tuned. Thus, instead of giving a pre-specified number, the following function allows the researcher to give a vector of possible knot numbers. The function will help choose the optimal one. We will use the function `CoxKnotSearch`, which conducts cross-validation to choose the optimal knot number.
+
+```{r}
+time_start <- "age_start"
+time_end <- "age_end"
+status <- "failure"
+exposure <- paste0("lag", 0:19)
+
+# the possible knot number is 3,4, and 5
+knots_number <- c(3,4,5)
+latency <- 20
+
+# fit the model and choose the optimal knot number
+fit <- CoxKnotsearch(sim_data, time_start, time_end, status, exposure, knots_number, latency)
+extract_CoxKnotsearch(fit, lag = 15, latency = 20)
+
+
+# to account the variance in the ccross validation we recommend doing bootraps and using the following function 
+# which fits and gives the result at the specified lag in one function
+result <- CoxKnotsearch_boot(sim_data, time_start, time_end, status, exposure, latency = 20, knots_number = knots_number, lag = 10, parallel = TRUE,boot_iter = 10, id = "id")
+```
+
+## Adjusting for other covariates
+
+The package allows the researcher to adjust for other covariates by choosing the variable name and the adjust functions at they like. For example, I will use $X$ to denote the vector for the exposures, and $L$ to denote the vector for other covariates. The model fitted by the package can be roughtly understood as
+
+$$\lambda_t(X, Z) = g(X; \theta) + h(L;\psi)$$ where $g(X;\theta)$ is the fitted function for the exposures, and $h(L;\psi)$ is the function for other covariates. For example, in the following code, $h(L;\psi)$ is $\psi_1 L + \psi_2 L^2$
+
+```{r}
+time_start <- "age_start"
+time_end <- "age_end"
+status <- "failure"
+exposure <- paste0("lag", 0:19)
+knots <- 0:19
+latency <- 20
+fit <- CoxTermsearch(sim_data, time_start, time_end, status, exposure, knots = knots, latency)
+extract_CoxTermsearch(fit, 10, latency = latency, knot = knots)
+#In this example, we will generate a random covariate L and adjust for it in our model
+sim_data$L <- rbinom(nrow(sim_data), 1, 0.5)
+adjusted_variable <- "L"
+adjusted_model <- "L+I(L^2)"
+result <- CoxKnotsearch_boot(sim_data, time_start, time_end, status, exposure, latency = 20, knots_number = knots_number, lag = 10, parallel = TRUE, adjusted_variable = adjusted_variable, adjusted_model = adjusted_model, boot_iter = 10, id = "id")
+result
+```

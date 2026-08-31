@@ -1,0 +1,626 @@
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+
+============================================================
+[1/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.2, ph2=0.2
+============================================================
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.6min
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.2min
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:39: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.2min
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in multiply
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.1min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.5min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.4min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.4min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  5.0min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  9.0min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 10.0min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.5min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.5min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.7min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.7min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.7min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.9min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  9.5min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 10.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.9min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 10.5min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 12.0min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.4min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.1min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 13.5min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 14.9min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.4min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  6.9min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 12.7min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 14.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.0min
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  5.5min
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:39: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:39: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 10.4min
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in multiply
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 11.5min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.0min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  5.7min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 11.2min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 12.5min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.3min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  6.6min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 11.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 12.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.9min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  9.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 10.4min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  5.4min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  9.6min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 10.7min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  5.0min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  9.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 10.5min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.8min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.9min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.9min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  5.0min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  9.1min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 10.2min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.9min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  9.2min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 10.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:39: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.4min
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:39: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  3.9min
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:39: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:39: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:39: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  7.3min
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:39: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:72: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  8.1min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.1min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  7.9min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.1min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.9min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.7min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.7min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.1min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  7.7min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  8.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.5min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.4min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.1min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.2min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.6min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.5min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.5min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.5min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.4min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.1min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.1min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.6min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.5min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.8min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.9min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 10.1min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.3min
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:39: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  3.7min
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:39: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:39: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:39: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/estimators.py:39: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/opt/anaconda3/lib/python3.9/site-packages/numpy/core/fromnumeric.py:86: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  7.0min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  7.8min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.0min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  7.4min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  8.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.5min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.1min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  7.7min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  8.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.4min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.0min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  7.5min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  8.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.5min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.3min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  7.9min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  8.9min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.5min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.5min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.4min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.2min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.2min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.7min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.6min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  1.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  4.7min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed:  8.8min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed:  9.9min finished
+Done in 545.5s
+
+============================================================
+[2/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.2, ph2=0.5
+============================================================
+Done in 563.4s
+
+============================================================
+[3/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.2, ph2=0.8
+============================================================
+Done in 600.5s
+
+============================================================
+[4/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.5, ph2=0.2
+============================================================
+Done in 555.2s
+
+============================================================
+[5/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.5, ph2=0.5
+============================================================
+Done in 582.4s
+
+============================================================
+[6/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.5, ph2=0.8
+============================================================
+Done in 637.6s
+
+============================================================
+[7/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.8, ph2=0.2
+============================================================
+Done in 721.6s
+
+============================================================
+[8/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.8, ph2=0.5
+============================================================
+Done in 894.5s
+
+============================================================
+[9/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.8, ph2=0.8
+============================================================
+Done in 859.4s
+
+============================================================
+[10/36] Running: p_I1=0.2, p_I2=1, ph1=0.2, ph2=0.2
+============================================================
+Done in 691.9s
+
+============================================================
+[11/36] Running: p_I1=0.2, p_I2=1, ph1=0.2, ph2=0.5
+============================================================
+Done in 748.7s
+
+============================================================
+[12/36] Running: p_I1=0.2, p_I2=1, ph1=0.2, ph2=0.8
+============================================================
+Done in 740.2s
+
+============================================================
+[13/36] Running: p_I1=0.2, p_I2=1, ph1=0.5, ph2=0.2
+============================================================
+Done in 623.3s
+
+============================================================
+[14/36] Running: p_I1=0.2, p_I2=1, ph1=0.5, ph2=0.5
+============================================================
+Done in 641.1s
+
+============================================================
+[15/36] Running: p_I1=0.2, p_I2=1, ph1=0.5, ph2=0.8
+============================================================
+Done in 630.3s
+
+============================================================
+[16/36] Running: p_I1=0.2, p_I2=1, ph1=0.8, ph2=0.2
+============================================================
+Done in 594.2s
+
+============================================================
+[17/36] Running: p_I1=0.2, p_I2=1, ph1=0.8, ph2=0.5
+============================================================
+Done in 610.8s
+
+============================================================
+[18/36] Running: p_I1=0.2, p_I2=1, ph1=0.8, ph2=0.8
+============================================================
+Done in 617.2s
+
+============================================================
+[19/36] Running: p_I1=1, p_I2=0.2, ph1=0.2, ph2=0.2
+============================================================
+Done in 486.9s
+
+============================================================
+[20/36] Running: p_I1=1, p_I2=0.2, ph1=0.2, ph2=0.5
+============================================================
+Done in 543.5s
+
+============================================================
+[21/36] Running: p_I1=1, p_I2=0.2, ph1=0.2, ph2=0.8
+============================================================
+Done in 580.8s
+
+============================================================
+[22/36] Running: p_I1=1, p_I2=0.2, ph1=0.5, ph2=0.2
+============================================================
+Done in 518.1s
+
+============================================================
+[23/36] Running: p_I1=1, p_I2=0.2, ph1=0.5, ph2=0.5
+============================================================
+Done in 549.4s
+
+============================================================
+[24/36] Running: p_I1=1, p_I2=0.2, ph1=0.5, ph2=0.8
+============================================================
+Done in 572.8s
+
+============================================================
+[25/36] Running: p_I1=1, p_I2=0.2, ph1=0.8, ph2=0.2
+============================================================
+Done in 544.0s
+
+============================================================
+[26/36] Running: p_I1=1, p_I2=0.2, ph1=0.8, ph2=0.5
+============================================================
+Done in 576.2s
+
+============================================================
+[27/36] Running: p_I1=1, p_I2=0.2, ph1=0.8, ph2=0.8
+============================================================
+Done in 603.4s
+
+============================================================
+[28/36] Running: p_I1=1, p_I2=1, ph1=0.2, ph2=0.2
+============================================================
+Done in 466.9s
+
+============================================================
+[29/36] Running: p_I1=1, p_I2=1, ph1=0.2, ph2=0.5
+============================================================
+Done in 497.7s
+
+============================================================
+[30/36] Running: p_I1=1, p_I2=1, ph1=0.2, ph2=0.8
+============================================================
+Done in 518.3s
+
+============================================================
+[31/36] Running: p_I1=1, p_I2=1, ph1=0.5, ph2=0.2
+============================================================
+Done in 501.0s
+
+============================================================
+[32/36] Running: p_I1=1, p_I2=1, ph1=0.5, ph2=0.5
+============================================================
+Done in 533.0s
+
+============================================================
+[33/36] Running: p_I1=1, p_I2=1, ph1=0.5, ph2=0.8
+============================================================
+Done in 556.0s
+
+============================================================
+[34/36] Running: p_I1=1, p_I2=1, ph1=0.8, ph2=0.2
+============================================================
+Done in 551.8s
+
+============================================================
+[35/36] Running: p_I1=1, p_I2=1, ph1=0.8, ph2=0.5
+============================================================
+Done in 577.7s
+
+============================================================
+[36/36] Running: p_I1=1, p_I2=1, ph1=0.8, ph2=0.8
+============================================================
+Done in 593.1s
+
+============================================================
+TIMING REPORT  (300 iterations per combination)
+============================================================
+ p_I1  p_I2  ph1  ph2    seconds
+  0.2   0.2  0.2  0.2 545.531365
+  0.2   0.2  0.2  0.5 563.383739
+  0.2   0.2  0.2  0.8 600.539000
+  0.2   0.2  0.5  0.2 555.162090
+  0.2   0.2  0.5  0.5 582.420400
+  0.2   0.2  0.5  0.8 637.635732
+  0.2   0.2  0.8  0.2 721.566507
+  0.2   0.2  0.8  0.5 894.541935
+  0.2   0.2  0.8  0.8 859.420265
+  0.2   1.0  0.2  0.2 691.890856
+  0.2   1.0  0.2  0.5 748.673837
+  0.2   1.0  0.2  0.8 740.187998
+  0.2   1.0  0.5  0.2 623.336388
+  0.2   1.0  0.5  0.5 641.096390
+  0.2   1.0  0.5  0.8 630.328040
+  0.2   1.0  0.8  0.2 594.214127
+  0.2   1.0  0.8  0.5 610.792145
+  0.2   1.0  0.8  0.8 617.220835
+  1.0   0.2  0.2  0.2 486.933023
+  1.0   0.2  0.2  0.5 543.473194
+  1.0   0.2  0.2  0.8 580.777913
+  1.0   0.2  0.5  0.2 518.145178
+  1.0   0.2  0.5  0.5 549.428840
+  1.0   0.2  0.5  0.8 572.803957
+  1.0   0.2  0.8  0.2 544.002598
+  1.0   0.2  0.8  0.5 576.185970
+  1.0   0.2  0.8  0.8 603.394068
+  1.0   1.0  0.2  0.2 466.867455
+  1.0   1.0  0.2  0.5 497.710072
+  1.0   1.0  0.2  0.8 518.255982
+  1.0   1.0  0.5  0.2 500.990425
+  1.0   1.0  0.5  0.5 533.012277
+  1.0   1.0  0.5  0.8 556.010380
+  1.0   1.0  0.8  0.2 551.770097
+  1.0   1.0  0.8  0.5 577.702580
+  1.0   1.0  0.8  0.8 593.072039
+
+Average simulation time per combination: 600.8s (min 466.9s, max 894.5s)
+Total elapsed over 36 combinations: 21628.7s
+Saved results to /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/simulation_results.pkl
+Saved timings to /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/simulation_results_timings.csv

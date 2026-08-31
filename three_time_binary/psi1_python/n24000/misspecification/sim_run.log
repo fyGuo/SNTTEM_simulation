@@ -1,0 +1,98 @@
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+
+============================================================
+[1/8] Running: p_I1=0.2, p_I2=0.2, ph1=0.5, ph2=0.5 | gamma13=correct, gamma23=correct
+============================================================
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.4min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 10.1min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 18.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 20.4min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.4min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  9.6min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 17.7min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 19.8min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.4min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  9.9min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 18.2min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 20.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.4min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  9.8min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 17.8min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 19.9min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.5min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 10.0min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 18.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 20.4min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 10.1min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 18.6min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 20.7min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 10.6min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 18.9min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 21.1min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.5min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  9.9min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 18.1min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 20.1min finished
+Done in 1222.5s
+
+============================================================
+[2/8] Running: p_I1=0.2, p_I2=0.2, ph1=0.5, ph2=0.5 | gamma13=correct, gamma23=wrong
+============================================================
+Done in 1186.4s
+
+============================================================
+[3/8] Running: p_I1=0.2, p_I2=0.2, ph1=0.5, ph2=0.5 | gamma13=wrong, gamma23=correct
+============================================================
+Done in 1218.7s
+
+============================================================
+[4/8] Running: p_I1=0.2, p_I2=0.2, ph1=0.5, ph2=0.5 | gamma13=wrong, gamma23=wrong
+============================================================
+Done in 1194.8s
+
+============================================================
+[5/8] Running: p_I1=1, p_I2=1, ph1=0.5, ph2=0.5 | gamma13=correct, gamma23=correct
+============================================================
+Done in 1226.3s
+
+============================================================
+[6/8] Running: p_I1=1, p_I2=1, ph1=0.5, ph2=0.5 | gamma13=correct, gamma23=wrong
+============================================================
+Done in 1241.6s
+
+============================================================
+[7/8] Running: p_I1=1, p_I2=1, ph1=0.5, ph2=0.5 | gamma13=wrong, gamma23=correct
+============================================================
+Done in 1264.6s
+
+============================================================
+[8/8] Running: p_I1=1, p_I2=1, ph1=0.5, ph2=0.5 | gamma13=wrong, gamma23=wrong
+============================================================
+Done in 1208.0s
+
+============================================================
+TIMING REPORT  (300 iterations per combination)
+============================================================
+ p_I1  p_I2  ph1  ph2 gamma13 gamma23     seconds
+  0.2   0.2  0.5  0.5 correct correct 1222.481101
+  0.2   0.2  0.5  0.5 correct   wrong 1186.393576
+  0.2   0.2  0.5  0.5   wrong correct 1218.717272
+  0.2   0.2  0.5  0.5   wrong   wrong 1194.847225
+  1.0   1.0  0.5  0.5 correct correct 1226.288941
+  1.0   1.0  0.5  0.5 correct   wrong 1241.636337
+  1.0   1.0  0.5  0.5   wrong correct 1264.620007
+  1.0   1.0  0.5  0.5   wrong   wrong 1208.031175
+
+Average simulation time per combination: 1220.4s (min 1186.4s, max 1264.6s)
+Total elapsed over 8 combinations: 9763.0s
+Saved results to /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi1_python/n24000/misspecification/simulation_results.pkl
+Saved timings to /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi1_python/n24000/misspecification/simulation_results_timings.csv

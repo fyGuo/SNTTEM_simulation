@@ -1,0 +1,14 @@
+---
+title: "Untitled"
+author: "Fuyu Guo"
+date: "2026-01-10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+![](/Users/fuyuguo/ZhiyuYan_collaboration/flow_chart.svg)

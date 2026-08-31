@@ -3,3 +3,24 @@ __pycache__/
 *.pyc
 .DS_Store
 **/.claude/settings.local.json
+
+# --- R / macOS artifacts ---
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+
+# --- LaTeX build artifacts (simulation_summary.tex) ---
+simulation_summary.aux
+simulation_summary.fls
+simulation_summary.fdb_latexmk
+simulation_summary.log
+simulation_summary.out
+simulation_summary.toc
+*.synctex.gz
+
+# --- Files exceeding GitHub's 100MB per-file limit ---
+two_time_binary/changing_I1/mod1_ortho.rds
+two_time_binary/changing_I1/mod2_ortho.rds
+two_time_binary/changing_I1/mod5.rds
+two_time_binary/changing_I1_null_effect/mod5.rds

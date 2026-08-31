@@ -1,0 +1,111 @@
+
+R version 4.3.1 (2023-06-16) -- "Beagle Scouts"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: aarch64-apple-darwin20 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> setwd("~/PhD_thesis/Thesis_1_SNTTEM/Codes/two_time/Delta_4_Elig_01")
+> files <- list.files(path = "~/PhD_thesis/Thesis_1_SNTTEM/Codes/two_time/Delta_4_Elig_01", pattern = "PS1_control+")
+> for (i in 1:8) {
++   source(files[i])
++   if(i == 1) {
++     result <- temp
++   } else{
++     result <- rbind(result, temp)
++   }
++ }
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.2     ✔ tibble    3.3.0
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Loading required package: future
+Registered S3 method overwritten by 'future':
+  method               from      
+  all.equal.connection parallelly
+
+Attaching package: ‘geex’
+
+The following object is masked from ‘package:lubridate’:
+
+    show
+
+The following object is masked from ‘package:methods’:
+
+    show
+
+
+Attaching package: ‘MASS’
+
+The following object is masked from ‘package:dplyr’:
+
+    select
+
+Loading required package: sandwich
+46.327 sec elapsed
+51.019 sec elapsed
+22.329 sec elapsed
+102.805 sec elapsed
+44.093 sec elapsed
+48.934 sec elapsed
+22.48 sec elapsed
+94.686 sec elapsed
+45.442 sec elapsed
+49.203 sec elapsed
+21.596 sec elapsed
+95.291 sec elapsed
+44.62 sec elapsed
+48.874 sec elapsed
+42.499 sec elapsed
+96.685 sec elapsed
+46.102 sec elapsed
+50.569 sec elapsed
+21.788 sec elapsed
+105.176 sec elapsed
+50.735 sec elapsed
+53.721 sec elapsed
+21.502 sec elapsed
+102.599 sec elapsed
+48.066 sec elapsed
+52.889 sec elapsed
+21.216 sec elapsed
+103.302 sec elapsed
+48.721 sec elapsed
+52.893 sec elapsed
+21.719 sec elapsed
+105.668 sec elapsed
+Warning messages:
+1: package ‘ggplot2’ was built under R version 4.3.3 
+2: package ‘tibble’ was built under R version 4.3.3 
+3: package ‘purrr’ was built under R version 4.3.3 
+4: package ‘rootSolve’ was built under R version 4.3.3 
+5: package ‘future’ was built under R version 4.3.3 
+6: package ‘matrixcalc’ was built under R version 4.3.3 
+7: package ‘gmm’ was built under R version 4.3.3 
+> Sys.time()
+[1] "2025-11-15 13:22:37 EST"
+> 
+> 
+> saveRDS(result, file = "simulation_results.rds")
+> 
+> proc.time()
+    user   system  elapsed 
+ 124.705   11.511 1785.117 

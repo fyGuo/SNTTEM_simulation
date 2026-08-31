@@ -1,0 +1,95 @@
+
+R version 4.3.1 (2023-06-16) -- "Beagle Scouts"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: aarch64-apple-darwin20 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> setwd("~/PhD_thesis/Thesis_1_SNTTEM/Codes/PS1_Efficiency_delta_0_small_sample")
+> files <- list.files(path = "~/PhD_thesis/Thesis_1_SNTTEM/Codes/PS1_Efficiency_delta_0_small_sample", pattern = "PS1_control+")
+> for (i in 1:6) {
++   source(files[i])
++   if(i == 1) {
++     result <- temp
++   } else{
++     result <- rbind(result, temp)
++   }
++ }
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.2     ✔ tibble    3.3.0
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Loading required package: future
+Registered S3 method overwritten by 'future':
+  method               from      
+  all.equal.connection parallelly
+
+Attaching package: ‘geex’
+
+The following object is masked from ‘package:lubridate’:
+
+    show
+
+The following object is masked from ‘package:methods’:
+
+    show
+
+
+Attaching package: ‘MASS’
+
+The following object is masked from ‘package:dplyr’:
+
+    select
+
+Loading required package: sandwich
+9.998 sec elapsed
+9.398 sec elapsed
+5.137 sec elapsed
+17.55 sec elapsed
+9.165 sec elapsed
+9.57 sec elapsed
+5.653 sec elapsed
+17.605 sec elapsed
+8.891 sec elapsed
+9.482 sec elapsed
+5.988 sec elapsed
+17.777 sec elapsed
+9.677 sec elapsed
+9.806 sec elapsed
+5.445 sec elapsed
+16.522 sec elapsed
+9.436 sec elapsed
+9.517 sec elapsed
+5.268 sec elapsed
+17.77 sec elapsed
+9.441 sec elapsed
+9.363 sec elapsed
+5.762 sec elapsed
+17.073 sec elapsed
+There were 19 warnings (use warnings() to see them)
+> 
+> 
+> 
+> saveRDS(result, file = "simulation_results.rds")
+> 
+> proc.time()
+   user  system elapsed 
+ 51.676   5.843 252.291 

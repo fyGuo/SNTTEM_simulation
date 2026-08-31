@@ -1,0 +1,237 @@
+
+R version 4.3.1 (2023-06-16) -- "Beagle Scouts"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: aarch64-apple-darwin20 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+[Previously saved workspace restored]
+
+> ## this code is to evaluate the double robustness of the SNTTEM g-estimation
+> # Under the Homoschesasticity assumption
+> # load packages
+> library(tidyverse)
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.4.4     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+> library(rootSolve)
+Warning message:
+package ‘rootSolve’ was built under R version 4.3.3 
+> library(furrr)
+Loading required package: future
+> library(tictoc)
+> library(geex)
+
+Attaching package: ‘geex’
+
+The following object is masked from ‘package:lubridate’:
+
+    show
+
+The following object is masked from ‘package:methods’:
+
+    show
+
+> library(MASS)
+
+Attaching package: ‘MASS’
+
+The following object is masked from ‘package:dplyr’:
+
+    select
+
+> library(matrixcalc)
+Warning message:
+package ‘matrixcalc’ was built under R version 4.3.3 
+> library(gmm)
+Loading required package: sandwich
+Warning message:
+package ‘gmm’ was built under R version 4.3.3 
+> source("Generate_data.R")
+> source("working_models.R")
+> sample <- 5000
+> iter <- 1000
+> psi <- c(0, 0)
+> seed <- 10086
+> 
+> # set the working models
+> working_ps1 <- FALSE
+> working_ps0 <- TRUE
+> working_mu1 <- TRUE
+> working_mu0 <- FALSE
+> 
+> 
+> 
+> # the conventional estimator
+> ee_old <- function(data){
++   function(theta){
++     with(data,
++          c(L0*(A0-ps0)*((1-A1)/(1-ps1)*(Y-mu1)+mu1-mu0-gamma0(L0, theta[1])*A0),
++            I1*L1*(A1-ps1)*(Y-gamma1(L1, theta[2])*A1 - mu1)))
++   }
++ }
+> 
+> plan("multisession")
+> set.seed(seed)
+> tic()
+> est_old <- furrr::future_map_dfr(.x = 1:iter, .f = function(i, n= sample) {
++   df <- generate_data(n, psi0 = psi[1], psi1 = psi[2], theta = 0, var = "homo")
++   df <- working_model(df, ps1 = working_ps1, ps0 = working_ps0, mu1 = working_mu1, mu0 = working_mu0) # apply the working models
++ 
++   # with the working models, we can do the estimation
++   est_psi <-  m_estimate(ee_old, data = df, root_control = setup_root_control(start = c(0,0)))@"estimates"
++   Y00 <- df$Y - gamma1(df$L1, est_psi[2]) * df$A1 - gamma0(df$L0, est_psi[1]) * df$A0
++   ee_old_score <-  cbind(df$L0*(df$A0-df$ps0)*((1-df$A1)/(1-df$ps1)*(df$Y-df$mu1)+df$mu1-df$mu0-gamma0(df$L0,0)*df$A0),
++                          df$L1*df$I1*(df$A1-df$ps1)*(df$Y-gamma1(df$L1, 0)*df$A1 - df$mu1))
++ 
++   est_cov <-  cov(ee_old_score )
++   chisq_stat <- n*t(colMeans(ee_old_score)) %*% ginv(est_cov) %*% (colMeans(ee_old_score)) # conduct the score testing
++   reject <- chisq_stat > qchisq(0.95, df = 2) # 2 is the number of parameters we are estimating
++ 
++   # return the result
++   est <- data.frame(id = i, est_psi0 = est_psi[1], est_psi1 = est_psi[2],
++                     Y00 = mean(Y00, na.rm = TRUE),
++                     reject = reject)
++   return(est)
++ },
++ .options = furrr_options(seed = TRUE))
+> toc()
+148.802 sec elapsed
+> 
+> 
+> 
+> ##############################
+> # The SNTTEM estimator
+> ee_SNTTEM <- function(data) {
++   function(theta){
++     with(data,
++          c(L0*(A0-ps0)*(((1-A1)/(1-ps1))^(1-I1)*(Y-gamma1(L1, theta[2])*A1-mu1)+mu1-mu0-gamma0(L0, theta[1])*A0),
++            I1*L1*(A1-ps1)*(Y-gamma1(L1, theta[2])*A1 - mu1)))
++   }
++ }
+> 
+> plan("multisession")
+> tic()
+> set.seed(seed)
+> 
+> est_SNTTEM <- furrr::future_map_dfr(.x = 1:iter, .f = function(i, n= sample) {
++   df <- generate_data(n, psi0 = psi[1], psi1 = psi[2], theta = 0, var = "homo")
++   df <- working_model(df, ps1 = working_ps1, ps0 = working_ps0, mu1 = working_mu1, mu0 = working_mu0) # apply the working models
++ 
++   # with the working models, we can do the estimation
++   est_psi <-  m_estimate(ee_SNTTEM, data = df, root_control = setup_root_control(start = c(0,0)))@"estimates"
++   Y00 <- df$Y - gamma1(df$L1, est_psi[2]) * df$A1 - gamma0(df$L0, est_psi[1]) * df$A0
++   ee_SNTTEM_score <-  cbind(df$L0*(df$A0-df$ps0)*(((1-df$A1)/(1-df$ps1))^(1-df$I1)*(df$Y-gamma1(df$L1, 0)*df$A1-df$mu1)+df$mu1-df$mu0-gamma0(df$L0,0)*df$A0),
++                             df$L1*df$I1*(df$A1-df$ps1)*(df$Y-gamma1(df$L1, 0)*df$A1 - df$mu1))
++ 
++   est_cov <-  cov(ee_SNTTEM_score)
++   chisq_stat <- n*t(colMeans(ee_SNTTEM_score)) %*% ginv(est_cov) %*% (colMeans(ee_SNTTEM_score)) # conduct the score testing
++   reject <- chisq_stat > qchisq(0.95, df = 2) # 2 is the number of parameters we are estimating
++ 
++   # return the result
++   est <- data.frame(id = i, est_psi0 = est_psi[1], est_psi1 = est_psi[2],
++                     Y00 = mean(Y00, na.rm = TRUE),
++                     reject = reject)
++   return(est)
++ },
++ .options = furrr_options(seed = TRUE))
+> toc()
+162.051 sec elapsed
+> ####################
+> # the combined estimator
+> plan("multisession")
+> tic()
+> set.seed(seed)
+> 
+> est_combined <- furrr::future_map_dfr(.x = 1:iter,
++                                       .f = function(i, n= sample) {
++                                         df <- generate_data(n, psi0 = psi[1], psi1 = psi[2], theta = 0, var = "homo")
++                                         df <- working_model(df, ps1 = working_ps1, ps0 = working_ps0, mu1 = working_mu1, mu0 = working_mu0) # apply the working models
++                                         x <- as.matrix(df)
++                                         g <- function(theta, x){
++                                           cbind(x[,1]*(x[,2]-x[,7])*(((1-x[,5])/(1-x[,8]))*(x[,6]-x[,9])+x[,9]-x[,11]-gamma0(x[,1], theta[1])*x[,2]),
++                                                 x[,4]*x[,3]*(x[,5]-x[,8])*(x[,6]-gamma1(x[,3], theta[2])*x[,5] - x[,9]),
++                                                 x[,1]*(x[,2]-x[,7])*(((1-x[,5])/(1-x[,8]))^(1-x[,4])*(x[,6]-gamma1(x[,3], theta[2])*x[,5]-x[,9])+x[,9]-x[,11]-gamma0(x[,1], theta[1])*x[,2])) %>%
++                                             return()
++                                         }
++                                         mod <- gmm(g, x = x, t0 = c(0,0), type = "iterative")
++                                         est_psi <- mod$coefficients
++                                         Y00 <- df$Y - gamma1(df$L1, est_psi[2]) * df$A1 - gamma0(df$L0, est_psi[1]) * df$A0
++ 
++ 
++                                         chisq_stat <- t(mod$coefficients) %*% ginv(mod$vcov) %*% mod$coefficients
++                                         reject <- chisq_stat > qchisq(0.95, df = 2)
++                                         est <- data.frame(id = i, est_psi0 = est_psi[1], est_psi1 = est_psi[2],
++                                                           Y00 = mean(Y00, na.rm = TRUE),
++                                                           reject = reject)
++ 
++                                         return(est)
++                                       },
++                                       .options = furrr_options(seed = TRUE))
+> toc()
+52.604 sec elapsed
+> 
+> 
+> 
+> # the outputs
+> est_old %>%
++   summarise(psi1_mean = mean(est_psi1, na.rm = TRUE),
++             psi1_sd = sd(est_psi1, na.rm = TRUE)*sqrt(sample),
++             psi0_mean = mean(est_psi0, na.rm = TRUE),
++             psi0_sd = sd(est_psi0, na.rm = TRUE)*sqrt(sample),
++             Y00_mean = mean(Y00, na.rm = TRUE),
++             Y00_sd = sd(Y00, na.rm = TRUE)*sqrt(sample),
++             reject_rate = mean(reject, na.rm = TRUE))
+    psi1_mean  psi1_sd     psi0_mean  psi0_sd Y00_mean   Y00_sd reject_rate
+1 -0.00109117 3.947854 -0.0007610313 8.699105 2.003748 19.19992       0.042
+> 
+> est_SNTTEM %>%
++   summarise(psi1_mean = mean(est_psi1, na.rm = TRUE),
++             psi1_sd = sd(est_psi1, na.rm = TRUE)*sqrt(sample),
++             psi0_mean = mean(est_psi0, na.rm = TRUE),
++             psi0_sd = sd(est_psi0, na.rm = TRUE)*sqrt(sample),
++             Y00_mean = mean(Y00, na.rm = TRUE),
++             Y00_sd = sd(Y00, na.rm = TRUE)*sqrt(sample),
++             reject_rate = mean(reject, na.rm = TRUE))
+    psi1_mean  psi1_sd    psi0_mean  psi0_sd Y00_mean   Y00_sd reject_rate
+1 -0.00109117 3.947854 -0.000372364 4.389962 2.002933 14.67917       0.037
+> 
+> 
+> 
+> est_combined %>%
++   summarise(psi1_mean = mean(est_psi1, na.rm = TRUE),
++             psi1_sd = sd(est_psi1, na.rm = TRUE)*sqrt(sample),
++             psi0_mean = mean(est_psi0, na.rm = TRUE),
++             psi0_sd = sd(est_psi0, na.rm = TRUE)*sqrt(sample),
++             Y00_mean = mean(Y00, na.rm = TRUE),
++             Y00_sd = sd(Y00, na.rm = TRUE)*sqrt(sample),
++             reject_rate = mean(reject, na.rm = TRUE))
+      psi1_mean  psi1_sd   psi0_mean  psi0_sd Y00_mean   Y00_sd reject_rate
+1 -0.0007985144 3.860528 0.001717776 4.367105 1.998502 14.42859       0.036
+> 
+> 
+> 
+> 
+> 
+> proc.time()
+   user  system elapsed 
+ 15.162   1.177 364.927 

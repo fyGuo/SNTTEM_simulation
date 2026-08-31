@@ -1,0 +1,226 @@
+
+R version 4.3.1 (2023-06-16) -- "Beagle Scouts"
+Copyright (C) 2023 The R Foundation for Statistical Computing
+Platform: aarch64-apple-darwin20 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> ## this code is to evaluate the double robustness of the SNTTEM g-estimation
+> # Under the Homoschesasticity assumption
+> # load packages
+> library(tidyverse)
+── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.2     ✔ tibble    3.3.0
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.4     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (<http://conflicted.r-lib.org/>) to force all conflicts to become errors
+Warning messages:
+1: package ‘ggplot2’ was built under R version 4.3.3 
+2: package ‘tibble’ was built under R version 4.3.3 
+3: package ‘purrr’ was built under R version 4.3.3 
+> library(rootSolve)
+Warning message:
+package ‘rootSolve’ was built under R version 4.3.3 
+> library(furrr)
+Loading required package: future
+Registered S3 method overwritten by 'future':
+  method               from      
+  all.equal.connection parallelly
+Warning message:
+package ‘future’ was built under R version 4.3.3 
+> library(tictoc)
+> library(geex)
+
+Attaching package: ‘geex’
+
+The following object is masked from ‘package:lubridate’:
+
+    show
+
+The following object is masked from ‘package:methods’:
+
+    show
+
+> library(MASS)
+
+Attaching package: ‘MASS’
+
+The following object is masked from ‘package:dplyr’:
+
+    select
+
+> library(matrixcalc)
+Warning message:
+package ‘matrixcalc’ was built under R version 4.3.3 
+> library(gmm)
+Loading required package: sandwich
+Warning message:
+package ‘gmm’ was built under R version 4.3.3 
+> library(ranger)
+Warning message:
+package ‘ranger’ was built under R version 4.3.3 
+> setwd("~/PhD_thesis/Thesis_1_SNTTEM/Codes/two_time_binary/changing_I1_null_effect")
+> source("Generate_data.R")
+> source("working_models.R")
+> sample <- 6000
+> iter <-400
+> 
+> # set the propensity score at time 1
+> ps1_int <- 0
+> p_I1 <- 1
+> delta <- 0
+> 
+> # set the parameters
+> psi01 <- 0
+> psi02 <- 0
+> psi12 <- 0
+> seed <-3411
+> # set the working models
+> working_ps1 <- TRUE
+> working_ps0 <- TRUE
+> working_mu02 <- TRUE
+> working_mu12 <- TRUE
+> 
+> # efficient influence functions
+> mod1 <- read_rds("mod1_ortho.rds")
+> mod2 <- read_rds("mod2_ortho.rds")
+> mod3 <- read_rds("mod3.rds")
+> mod4 <- read_rds("mod4.rds")
+> mod5 <- read_rds("mod5.rds")
+> 
+> fun_ortho <- function(mod1, mod2, newdata){
++   pred_cov <- predict(mod1,data.frame(L1 = newdata$L1,
++                                       A0 = newdata$A0,
++                                       L0 = newdata$L0))$pred
++ 
++   pred_var_inv <-  (predict(mod2,data.frame(L1 = newdata$L1,
++                                             A0 = newdata$A0,
++                                             L0 = newdata$L0))$pred)^(-1)
++ 
++   return(pred_cov*pred_var_inv)
++ }
+> 
+> 
+> 
+> fun_d0_eff <- function(mod3, mod5, newdata){
++   return(predict(mod3,data.frame(L0 = newdata$L0))$pred^(-1)*(predict(mod5,data.frame(L0 = newdata$L0))$pred))
++ }
+> 
+> fun_d1_eff <- function(mod2, mod4, newdata){
++   return(predict(mod2,data.frame(L1 = newdata$L1,
++                                  A0 = newdata$A0,
++                                  L0 = newdata$L0))$pred^(-1)*(predict(mod4,data.frame(L1 = newdata$L1,
++                                                                                  A0 = newdata$A0,
++                                                                                  L0 = newdata$L0))$pred))
++ }
+> 
+> #the conventional estimator
+> ee_old <- function(data){
++   function(theta){
++     with(data,
++          c(eff_d0*(A0-ps0)*((A0==A1)/((1-ps1)*(1-A0) + A0*ps1)*exp(-gamma02(L0, theta[1])*A0)*(Y2-mu12)+mu12*exp(-gamma02(L0, theta[1])*A0)-mu02),
++            eff_d1*I1*(A1-ps1)*(Y2*exp(-gamma12(L1, theta[2])*(A1-A0)) - mu12)))
++   }
++ }
+> 
+> # The SNTTEM estimator
+> ee_rbs_estimator <- function(data){
++   function(theta){
++     with(data,
++          c(eff_d0*(A0-ps0)*(((A0==A1)/((1-ps1)*(1-A0) + ps1*A0))^(1-I1)*exp(-gamma02(L0, theta[1])*A0)*(Y2*exp(-gamma12(L1, theta[2])*(A1-A0))-mu12)
++                      +mu12*exp(-gamma02(L0, theta[1])*A0)-mu02),
++            eff_d1*I1*(A1-ps1)*(Y2*exp(-gamma12(L1, theta[2])*(A1-A0)) - mu12)))
++   }
++ }
+> 
+> # The eff estimator
+> ee_eff_estimator <- function(data){
++   function(theta){
++     with(data,
++          c(eff_d0*(A0-ps0)*(((A0==A1)/((1-ps1)*(1-A0) + ps1*A0))^(1-I1)*exp(-gamma02(L0, theta[1])*A0)*(Y2*exp(-gamma12(L1, theta[2])*(A1-A0))-mu12)
++                             +mu12*exp(-gamma02(L0, theta[1])*A0)-mu02) - eff_d0*ortho_coef*I1*(A1-ps1)*(Y2*exp(-gamma12(L1, theta[2])*(A1-A0)) - mu12),
++            eff_d1*I1*(A1-ps1)*(Y2*exp(-gamma12(L1, theta[2])*(A1-A0)) - mu12)))
++   }
++ }
+> 
+> options(future.globals.maxSize = 5e10)
+> 
+> 
+> plan("multicore")
+> set.seed(seed)
+> tic()
+> est <- furrr::future_map_dfr(.x = 1:iter, .f = function(i, n= sample) {
++   df <- generate_data(n, psi02 = psi02, psi12 = psi12, ps1_int = ps1_int, p_I1=p_I1)
++   # generate a sample splitting id
++   id_1 <- sample(1:n, size = n/2, replace = FALSE)
++   id_2 <- setdiff(1:n, id_1)
++ 
++   df <- working_model(df, id_1, id_2, ps1 = working_ps1, ps0 = working_ps0,  mu12 = working_mu12, mu02 = working_mu02) # apply the working models
++ 
++   df$eff_d0 <- fun_d0_eff(mod3, mod5, df)
++   df$eff_d1 <- fun_d1_eff(mod2, mod4, df)
++   df$ortho_coef <- fun_ortho(mod1, mod2, df)
++ 
++   # with the working models, we can do the estimation
++   est_psi_old <-  m_estimate(ee_old, data = df, root_control = setup_root_control(start = c(0,0)))@"estimates"
++   est_psi_rbs <-  m_estimate(ee_rbs_estimator, data = df, root_control = setup_root_control(start = c(0,0)))@"estimates"
++   est_psi_eff <-  m_estimate(ee_eff_estimator, data = df, root_control = setup_root_control(start = c(0,0)))@"estimates"
++ 
++   # GMM estimator
++   x <- as.matrix(df)
++   g <- function(theta, x){
++     cbind(x[,"eff_d0"]^2*(x[,"A0"]-x[,"ps0"])*(((x[,"A0"]==x[,"A1"])/((1-x[,"ps1"])*(1-x[,"A0"]) +x[,"A0"]*x[,"ps1"]))*exp(-gamma02(x[,"L0"], theta[1])*x[,"A0"])*(x[,"Y2"]-x[,"mu12"])+x[,"mu12"]*exp(-gamma02(x[,"L0"], theta[1])*x[,"A0"])-x[,"mu02"]),
++           x[,"eff_d0"]*(x[,"A0"]-x[,"ps0"])*(((x[,"A0"]==x[,"A1"])/((1-x[,"ps1"])*(1-x[,"A0"]) +x[,"A0"]*x[,"ps1"]))^(1-x[,"I1"])*exp(-gamma02(x[,"L0"], theta[1])*x[,"A0"])*(x[,"Y2"]*exp(-gamma12(x[,"L1"], theta[2])*(x[,"A1"] - x[,"A0"])) - x[,"mu12"])
++                                 +x[,"mu12"]*exp(-gamma02(x[,"L0"], theta[1])*x[,"A0"])-x[,"mu02"]),
++           x[,"eff_d1"]*x[,"I1"]*(x[,"A1"]-x[,"ps1"])*(x[,"Y2"]*exp(-gamma12(x[,"L1"], theta[2])*(x[,"A1"] - x[,"A0"])) - x[,"mu12"]) ) %>%
++       return()
++   }
++   mod <- gmm(g, x = x, t0 = c(0,0), type = "iterative")
++   est_psi_gmm <- mod$coefficients
++ 
++   # return the result
++   est <- data.frame(id = c(i,i,i, i),
++                     est_psi02 = c(est_psi_old[1], est_psi_rbs[1], est_psi_eff[1],  est_psi_gmm[1]),
++                     est_psi12 = c(est_psi_old[2], est_psi_rbs[2], est_psi_eff[2], est_psi_gmm[2]),
++                     method = c("Three-step", "Robins' estimator", "eff", "GMM"))
++   return(est)
++ },
++ .options = furrr_options(seed = TRUE))
+There were 50 or more warnings (use warnings() to see the first 50)
+> toc()
+531.502 sec elapsed
+> 
+> 
+> 
+> ##############################
+> 
+> est$p_I1 <- p_I1
+> est %>% group_by(method) %>%
++   summarise(bias_psi02 = mean(est_psi02 - psi02),
++             bias_psi12 = mean(est_psi12 - psi12),
++             var_psi02 = var(est_psi02)*sample,
++             var_psi12 = var(est_psi12)*sample,
++             mse_psi02 = mean((est_psi02 - psi02)^2)*sample,
++             mse_psi12 = mean((est_psi12 - psi12)^2)*sample) %>%
++   saveRDS("results.rds")
+> 
+> proc.time()
+    user   system  elapsed 
+4390.003  510.359  536.326 

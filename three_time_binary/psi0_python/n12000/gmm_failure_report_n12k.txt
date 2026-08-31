@@ -1,0 +1,6 @@
+GMM failure cells (|est_psi03| > 10 in >5% of reps):
+p_I1,p_I2,ph1,ph2         n  fail%   neg/pos         min         max    core P25..P75
+(0.2, 0.2, 0.2, 0.2)    300     8%     15/10    -69984.6     40773.0   [-0.92,0.29]
+(1.0, 0.2, 0.2, 0.2)    300     7%      13/7    -84367.4     10634.8   [-0.71,0.30]
+
+Saved /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n12000/gmm_failure_distribution.pdf
