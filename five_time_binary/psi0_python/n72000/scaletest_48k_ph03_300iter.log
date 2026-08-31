@@ -1,0 +1,32 @@
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+
+============================================================
+[1/2] Running: p_I=(0.2, 0.2, 0.2, 0.2), ph=(0.3, 0.3, 0.3, 0.3)
+============================================================
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  6.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 23.8min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 49.8min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 57.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 10.4min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 30.8min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 56.6min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 64.0min finished
+Done in 3435.3s
+
+============================================================
+[2/2] Running: p_I=(1, 1, 1, 1), ph=(0.3, 0.3, 0.3, 0.3)
+============================================================
+Done in 3841.0s
+
+============================================================
+TIMING REPORT  (300 iterations per combination, n=48000)
+============================================================
+ p_I1  p_I2  p_I3  p_I4  ph1  ph2  ph3  ph4     seconds
+  0.2   0.2   0.2   0.2  0.3  0.3  0.3  0.3 3435.328266
+  1.0   1.0   1.0   1.0  0.3  0.3  0.3  0.3 3841.028844
+
+Average simulation time per combination: 3638.2s (min 3435.3s, max 3841.0s)
+Total elapsed over 2 combinations: 7276.4s
+Saved results to /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi0_python/n24000/scaletest_48k_ph03_300iter_results.pkl
+Saved timings to /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi0_python/n24000/scaletest_48k_ph03_300iter_results_timings.csv

@@ -1,0 +1,45 @@
+==================================================================
+SNTTEM five-time-point simulation (psi0)
+==================================================================
+started     : Thu Aug 27 21:09:06 EDT 2026
+host        : HSPH-YVWHQMWMDV
+directory   : /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi0_python/n24000
+interpreter : /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/.venv/bin/python
+python      : 3.13.15 arm64
+packages    : numpy 2.5.2 | pandas 3.0.5 | scipy 1.18.1 | scikit-learn 1.9.0 | joblib 1.5.3 | matplotlib 3.11.1
+cores       : 12
+------------------------------------------------------------------
+settings (from run_simulation.py):
+  PSI05 = 0.0
+  PSI15 = 0.0
+  PSI25 = 0.0
+  PSI35 = 0.0
+  PSI45 = 0.0
+  N = 24000
+  N_ITER = 300
+  SEED = 3411
+  P_I_VALUES = [0.2, 1]
+  PH_VALUES = [0.2, 0.5, 0.8]
+==================================================================
+
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+
+============================================================
+[1/6] Running: p_I=(0.2, 0.2, 0.2, 0.2), ph=(0.2, 0.2, 0.2, 0.2)
+============================================================
+/Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi0_python/n24000/estimators.py:109: RuntimeWarning: overflow encountered in exp
+  b0 = mu15 * np.exp(-gamma05(L0, psi05) * A0) - mu05
+/Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/.venv/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:83: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi0_python/n24000/estimators.py:109: RuntimeWarning: overflow encountered in exp
+  b0 = mu15 * np.exp(-gamma05(L0, psi05) * A0) - mu05
+/Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/.venv/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:83: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+/Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/.venv/lib/python3.13/site-packages/joblib/externals/loky/backend/resource_tracker.py:359: UserWarning: resource_tracker: There appear to be 18 leaked semlock objects to clean up at shutdown
+  warnings.warn(
+/Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/.venv/lib/python3.13/site-packages/joblib/externals/loky/backend/resource_tracker.py:359: UserWarning: resource_tracker: There appear to be 2 leaked folder objects to clean up at shutdown
+  warnings.warn(
+/Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/.venv/lib/python3.13/site-packages/joblib/externals/loky/backend/resource_tracker.py:375: UserWarning: resource_tracker: /tmp/joblib_memmapping_folder_71018_79f43260cae246868fe7007a3abaa767_a6f85fd0ad4a4a9ba145ce563301aefa: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
+/Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/.venv/lib/python3.13/site-packages/joblib/externals/loky/backend/resource_tracker.py:375: UserWarning: resource_tracker: /tmp/joblib_memmapping_folder_71018_79f43260cae246868fe7007a3abaa767_a1ebbdbc78e24d6f9f236930f28022f4: FileNotFoundError(2, 'No such file or directory')
+  warnings.warn(f"resource_tracker: {name}: {e!r}")
