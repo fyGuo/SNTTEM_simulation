@@ -1,0 +1,102 @@
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+
+============================================================
+[1/8] Running: p_I1=0.2, p_I2=0.2, ph1=0.5, ph2=0.5 | gamma13=correct, gamma23=correct
+============================================================
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.6min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 16.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 18.4min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  4.0min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 11.3min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 20.6min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 23.1min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  4.2min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 11.4min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 21.0min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 23.5min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  4.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 13.5min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 24.7min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 27.8min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.5min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 10.0min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 18.4min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 20.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+/Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n24000/misspecification/estimators.py:102: RuntimeWarning: overflow encountered in exp
+  + mu13 * np.exp(-gamma03(L0, psi03) * A0)
+/Users/fuyuguo/miniforge3/envs/snttem/lib/python3.11/site-packages/numpy/_core/fromnumeric.py:83: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  6.1min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 16.8min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 30.6min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 34.0min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  5.5min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 15.8min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 28.9min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 32.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  5.3min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 14.9min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 27.1min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 30.1min finished
+Done in 1103.2s
+
+============================================================
+[2/8] Running: p_I1=0.2, p_I2=0.2, ph1=0.5, ph2=0.5 | gamma13=correct, gamma23=wrong
+============================================================
+Done in 1384.2s
+
+============================================================
+[3/8] Running: p_I1=0.2, p_I2=0.2, ph1=0.5, ph2=0.5 | gamma13=wrong, gamma23=correct
+============================================================
+Done in 1408.0s
+
+============================================================
+[4/8] Running: p_I1=0.2, p_I2=0.2, ph1=0.5, ph2=0.5 | gamma13=wrong, gamma23=wrong
+============================================================
+Done in 1665.1s
+
+============================================================
+[5/8] Running: p_I1=1, p_I2=1, ph1=0.5, ph2=0.5 | gamma13=correct, gamma23=correct
+============================================================
+Done in 1236.4s
+
+============================================================
+[6/8] Running: p_I1=1, p_I2=1, ph1=0.5, ph2=0.5 | gamma13=correct, gamma23=wrong
+============================================================
+Done in 2041.8s
+
+============================================================
+[7/8] Running: p_I1=1, p_I2=1, ph1=0.5, ph2=0.5 | gamma13=wrong, gamma23=correct
+============================================================
+Done in 1938.0s
+
+============================================================
+[8/8] Running: p_I1=1, p_I2=1, ph1=0.5, ph2=0.5 | gamma13=wrong, gamma23=wrong
+============================================================
+Done in 1808.4s
+
+============================================================
+TIMING REPORT  (300 iterations per combination)
+============================================================
+ p_I1  p_I2  ph1  ph2 gamma13 gamma23     seconds
+  0.2   0.2  0.5  0.5 correct correct 1103.246998
+  0.2   0.2  0.5  0.5 correct   wrong 1384.208206
+  0.2   0.2  0.5  0.5   wrong correct 1407.966013
+  0.2   0.2  0.5  0.5   wrong   wrong 1665.063199
+  1.0   1.0  0.5  0.5 correct correct 1236.366160
+  1.0   1.0  0.5  0.5 correct   wrong 2041.834855
+  1.0   1.0  0.5  0.5   wrong correct 1938.046634
+  1.0   1.0  0.5  0.5   wrong   wrong 1808.363280
+
+Average simulation time per combination: 1573.1s (min 1103.2s, max 2041.8s)
+Total elapsed over 8 combinations: 12585.1s
+Saved results to /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n24000/misspecification/simulation_results.pkl
+Saved timings to /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi0_python/n24000/misspecification/simulation_results_timings.csv

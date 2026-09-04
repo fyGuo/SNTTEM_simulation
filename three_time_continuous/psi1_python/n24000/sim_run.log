@@ -1,0 +1,406 @@
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+
+============================================================
+[1/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.2, ph2=0.2
+============================================================
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.5min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 14.1min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 15.7min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.6min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 14.0min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 15.7min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.9min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 14.6min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 16.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.6min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 14.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 16.0min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.2min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 15.2min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 17.1min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.0min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.4min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 15.7min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 17.5min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.0min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 14.8min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 16.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.0min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.6min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 15.9min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 17.9min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.1min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.8min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 16.2min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 18.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.5min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.0min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 12.9min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 14.4min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.5min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 14.0min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 15.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.8min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 14.5min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 16.2min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.7min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 14.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 16.0min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.0min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.4min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 15.6min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 17.4min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.1min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.5min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 15.9min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 17.9min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.3min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 15.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 17.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.5min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  9.7min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 17.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 19.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.1min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.7min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 16.1min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 18.2min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.4min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  6.9min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 12.8min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 14.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.5min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 14.0min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 15.7min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.8min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 14.6min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 16.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.5min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 14.0min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 15.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.2min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 15.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 17.1min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.0min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.5min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 15.8min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 17.7min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.0min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 14.8min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 16.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.0min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.6min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 15.9min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 18.0min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.1min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.8min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 16.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 18.4min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.4min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  6.9min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 12.7min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 14.2min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.5min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 13.8min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 15.5min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.7min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 14.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 16.0min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.5min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 13.9min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 15.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.2min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 15.1min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 16.9min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.9min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.3min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 15.4min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 17.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  7.9min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 14.8min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 16.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  2.9min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.5min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 15.7min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 17.7min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed:  3.0min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed:  8.6min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 16.0min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 18.0min finished
+Done in 944.0s
+
+============================================================
+[2/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.2, ph2=0.5
+============================================================
+Done in 942.4s
+
+============================================================
+[3/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.2, ph2=0.8
+============================================================
+Done in 980.4s
+
+============================================================
+[4/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.5, ph2=0.2
+============================================================
+Done in 961.9s
+
+============================================================
+[5/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.5, ph2=0.5
+============================================================
+Done in 1023.2s
+
+============================================================
+[6/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.5, ph2=0.8
+============================================================
+Done in 1050.3s
+
+============================================================
+[7/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.8, ph2=0.2
+============================================================
+Done in 995.1s
+
+============================================================
+[8/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.8, ph2=0.5
+============================================================
+Done in 1075.4s
+
+============================================================
+[9/36] Running: p_I1=0.2, p_I2=0.2, ph1=0.8, ph2=0.8
+============================================================
+Done in 1096.2s
+
+============================================================
+[10/36] Running: p_I1=0.2, p_I2=1, ph1=0.2, ph2=0.2
+============================================================
+Done in 861.5s
+
+============================================================
+[11/36] Running: p_I1=0.2, p_I2=1, ph1=0.2, ph2=0.5
+============================================================
+Done in 937.5s
+
+============================================================
+[12/36] Running: p_I1=0.2, p_I2=1, ph1=0.2, ph2=0.8
+============================================================
+Done in 973.5s
+
+============================================================
+[13/36] Running: p_I1=0.2, p_I2=1, ph1=0.5, ph2=0.2
+============================================================
+Done in 957.4s
+
+============================================================
+[14/36] Running: p_I1=0.2, p_I2=1, ph1=0.5, ph2=0.5
+============================================================
+Done in 1043.8s
+
+============================================================
+[15/36] Running: p_I1=0.2, p_I2=1, ph1=0.5, ph2=0.8
+============================================================
+Done in 1072.2s
+
+============================================================
+[16/36] Running: p_I1=0.2, p_I2=1, ph1=0.8, ph2=0.2
+============================================================
+Done in 1054.2s
+
+============================================================
+[17/36] Running: p_I1=0.2, p_I2=1, ph1=0.8, ph2=0.5
+============================================================
+Done in 1157.5s
+
+============================================================
+[18/36] Running: p_I1=0.2, p_I2=1, ph1=0.8, ph2=0.8
+============================================================
+Done in 1090.7s
+
+============================================================
+[19/36] Running: p_I1=1, p_I2=0.2, ph1=0.2, ph2=0.2
+============================================================
+Done in 856.4s
+
+============================================================
+[20/36] Running: p_I1=1, p_I2=0.2, ph1=0.2, ph2=0.5
+============================================================
+Done in 939.2s
+
+============================================================
+[21/36] Running: p_I1=1, p_I2=0.2, ph1=0.2, ph2=0.8
+============================================================
+Done in 977.6s
+
+============================================================
+[22/36] Running: p_I1=1, p_I2=0.2, ph1=0.5, ph2=0.2
+============================================================
+Done in 938.5s
+
+============================================================
+[23/36] Running: p_I1=1, p_I2=0.2, ph1=0.5, ph2=0.5
+============================================================
+Done in 1025.0s
+
+============================================================
+[24/36] Running: p_I1=1, p_I2=0.2, ph1=0.5, ph2=0.8
+============================================================
+Done in 1059.2s
+
+============================================================
+[25/36] Running: p_I1=1, p_I2=0.2, ph1=0.8, ph2=0.2
+============================================================
+Done in 996.7s
+
+============================================================
+[26/36] Running: p_I1=1, p_I2=0.2, ph1=0.8, ph2=0.5
+============================================================
+Done in 1078.1s
+
+============================================================
+[27/36] Running: p_I1=1, p_I2=0.2, ph1=0.8, ph2=0.8
+============================================================
+Done in 1101.9s
+
+============================================================
+[28/36] Running: p_I1=1, p_I2=1, ph1=0.2, ph2=0.2
+============================================================
+Done in 851.8s
+
+============================================================
+[29/36] Running: p_I1=1, p_I2=1, ph1=0.2, ph2=0.5
+============================================================
+Done in 928.7s
+
+============================================================
+[30/36] Running: p_I1=1, p_I2=1, ph1=0.2, ph2=0.8
+============================================================
+Done in 962.4s
+
+============================================================
+[31/36] Running: p_I1=1, p_I2=1, ph1=0.5, ph2=0.2
+============================================================
+Done in 936.2s
+
+============================================================
+[32/36] Running: p_I1=1, p_I2=1, ph1=0.5, ph2=0.5
+============================================================
+Done in 1015.7s
+
+============================================================
+[33/36] Running: p_I1=1, p_I2=1, ph1=0.5, ph2=0.8
+============================================================
+Done in 1036.1s
+
+============================================================
+[34/36] Running: p_I1=1, p_I2=1, ph1=0.8, ph2=0.2
+============================================================
+Done in 993.3s
+
+============================================================
+[35/36] Running: p_I1=1, p_I2=1, ph1=0.8, ph2=0.5
+============================================================
+Done in 1060.1s
+
+============================================================
+[36/36] Running: p_I1=1, p_I2=1, ph1=0.8, ph2=0.8
+============================================================
+Done in 1080.9s
+
+============================================================
+TIMING REPORT  (300 iterations per combination)
+============================================================
+ p_I1  p_I2  ph1  ph2     seconds
+  0.2   0.2  0.2  0.2  944.008104
+  0.2   0.2  0.2  0.5  942.397622
+  0.2   0.2  0.2  0.8  980.372764
+  0.2   0.2  0.5  0.2  961.943402
+  0.2   0.2  0.5  0.5 1023.195927
+  0.2   0.2  0.5  0.8 1050.258463
+  0.2   0.2  0.8  0.2  995.084011
+  0.2   0.2  0.8  0.5 1075.430799
+  0.2   0.2  0.8  0.8 1096.201771
+  0.2   1.0  0.2  0.2  861.495424
+  0.2   1.0  0.2  0.5  937.528878
+  0.2   1.0  0.2  0.8  973.479925
+  0.2   1.0  0.5  0.2  957.414644
+  0.2   1.0  0.5  0.5 1043.759049
+  0.2   1.0  0.5  0.8 1072.159378
+  0.2   1.0  0.8  0.2 1054.206797
+  0.2   1.0  0.8  0.5 1157.462496
+  0.2   1.0  0.8  0.8 1090.651258
+  1.0   0.2  0.2  0.2  856.380953
+  1.0   0.2  0.2  0.5  939.241427
+  1.0   0.2  0.2  0.8  977.612336
+  1.0   0.2  0.5  0.2  938.479077
+  1.0   0.2  0.5  0.5 1024.970482
+  1.0   0.2  0.5  0.8 1059.192584
+  1.0   0.2  0.8  0.2  996.687421
+  1.0   0.2  0.8  0.5 1078.079458
+  1.0   0.2  0.8  0.8 1101.905939
+  1.0   1.0  0.2  0.2  851.764389
+  1.0   1.0  0.2  0.5  928.713929
+  1.0   1.0  0.2  0.8  962.403829
+  1.0   1.0  0.5  0.2  936.229966
+  1.0   1.0  0.5  0.5 1015.721873
+  1.0   1.0  0.5  0.8 1036.062068
+  1.0   1.0  0.8  0.2  993.320493
+  1.0   1.0  0.8  0.5 1060.110700
+  1.0   1.0  0.8  0.8 1080.942297
+
+Average simulation time per combination: 1001.5s (min 851.8s, max 1157.5s)
+Total elapsed over 36 combinations: 36055.1s
+Saved results to /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_continuous/psi1_python/n24000/simulation_results.pkl
+Saved timings to /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_continuous/psi1_python/n24000/simulation_results_timings.csv

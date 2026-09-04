@@ -1,0 +1,16 @@
+Loaded 10800 rows, 12 cells, methods=['GMM estimator', 'Simple g-estimator', 'Three-step estimator']
+
+Saved /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi1_python/n24000/simulation_results_psi1_n24k_plots.pdf
+Saved /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi1_python/n24000/simulation_results_psi1_n24k_plots_variance_iqr.pdf
+Saved /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi1_python/n24000/simulation_results_psi1_n24k_plots_variance_2.5-97.5.pdf
+Saved /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi1_python/n24000/simulation_results_psi1_n24k_plots_bias.pdf
+Saved /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi1_python/n24000/simulation_results_psi1_n24k_plots_failure_proportion.pdf
+Saved /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi1_python/n24000/simulation_results_psi1_n24k_plots_qq.pdf
+Saved /Users/fuyuguo/PhD_thesis/Thesis_1_SNTTEM/Codes/three_time_binary/psi1_python/n24000/simulation_results_psi1_n24k_plots_histogram.pdf
+
+psi03: significant |z|>1.96 = 21/36  -> bias_se_zscores_psi1_n24k_psi03_mean_clipped.csv
+psi13: significant |z|>1.96 = 27/36  -> bias_se_zscores_psi1_n24k_psi13_mean_clipped.csv
+psi23: significant |z|>1.96 = 3/36  -> bias_se_zscores_psi1_n24k_psi23_mean_clipped.csv
+
+GMM failure cells (|est_psi03|>10 in >5% of reps):
+  None -- GMM well-behaved in all 12 cells at n=24000.
