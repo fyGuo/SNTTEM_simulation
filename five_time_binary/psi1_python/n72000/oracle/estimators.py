@@ -106,7 +106,7 @@ def ee_three_step_ipw(theta, df):
         )
     )
     eq3 = np.sum(
-        I2 * (A2 - ps2) *( 
+        I2 * (A2 - ps2) *(
             w4 * w3 * (Y* np.exp(-gamma25(L2, psi25) * (A2 - A1))
             - mu25))
         )

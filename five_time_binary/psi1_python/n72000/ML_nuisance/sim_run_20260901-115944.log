@@ -1,0 +1,115 @@
+==================================================================
+SNTTEM five-time-point simulation (psi1)
+==================================================================
+started     : Tue Sep  1 00:20:09 EDT 2026
+host        : HSPH-YVWHQMWMDV
+directory   : /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi1_python/n72000
+interpreter : /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/.venv/bin/python
+python      : 3.13.15 arm64
+packages    : numpy 2.5.2 | pandas 3.0.5 | scipy 1.18.1 | scikit-learn 1.9.0 | joblib 1.5.3 | matplotlib 3.11.1
+cores       : 12
+------------------------------------------------------------------
+settings (from run_simulation.py):
+  PSI05 = 1.0
+  PSI15 = 1.0
+  PSI25 = 1.0
+  PSI35 = 1.0
+  PSI45 = 1.0
+  N = 72000
+  N_ITER = 300
+  SEED = 3411
+  P_I_VALUES = [0.2, 1]
+  PH_VALUES = [0.3, 0.5, 0.8]
+==================================================================
+
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+
+============================================================
+[1/6] Running: p_I=(0.2, 0.2, 0.2, 0.2), ph=(0.3, 0.3, 0.3, 0.3)
+============================================================
+/Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi1_python/n72000/estimators.py:151: RuntimeWarning: overflow encountered in exp
+  b0 = mu15 * np.exp(-gamma05(L0, psi05) * A0) - mu05
+/Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/.venv/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:83: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 11.0min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 40.1min
+/Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi1_python/n72000/estimators.py:151: RuntimeWarning: overflow encountered in exp
+  b0 = mu15 * np.exp(-gamma05(L0, psi05) * A0) - mu05
+/Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/.venv/lib/python3.13/site-packages/numpy/_core/fromnumeric.py:83: RuntimeWarning: invalid value encountered in reduce
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 78.7min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 90.0min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 19.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 57.8min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 106.5min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 120.4min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 22.6min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 66.8min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 122.8min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 138.9min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 15.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 45.6min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 83.1min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 94.1min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 19.0min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 56.4min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 104.2min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 117.6min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 22.2min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 65.3min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 122.4min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 138.6min finished
+Done in 5397.3s
+
+============================================================
+[2/6] Running: p_I=(0.2, 0.2, 0.2, 0.2), ph=(0.5, 0.5, 0.5, 0.5)
+============================================================
+Done in 7223.1s
+
+============================================================
+[3/6] Running: p_I=(0.2, 0.2, 0.2, 0.2), ph=(0.8, 0.8, 0.8, 0.8)
+============================================================
+Done in 8334.8s
+
+============================================================
+[4/6] Running: p_I=(1, 1, 1, 1), ph=(0.3, 0.3, 0.3, 0.3)
+============================================================
+Done in 5645.2s
+
+============================================================
+[5/6] Running: p_I=(1, 1, 1, 1), ph=(0.5, 0.5, 0.5, 0.5)
+============================================================
+Done in 7056.0s
+
+============================================================
+[6/6] Running: p_I=(1, 1, 1, 1), ph=(0.8, 0.8, 0.8, 0.8)
+============================================================
+Done in 8316.4s
+
+============================================================
+TIMING REPORT  (300 iterations per combination)
+============================================================
+ p_I1  p_I2  p_I3  p_I4  ph1  ph2  ph3  ph4     seconds
+  0.2   0.2   0.2   0.2  0.3  0.3  0.3  0.3 5397.335247
+  0.2   0.2   0.2   0.2  0.5  0.5  0.5  0.5 7223.070068
+  0.2   0.2   0.2   0.2  0.8  0.8  0.8  0.8 8334.753875
+  1.0   1.0   1.0   1.0  0.3  0.3  0.3  0.3 5645.226101
+  1.0   1.0   1.0   1.0  0.5  0.5  0.5  0.5 7055.986474
+  1.0   1.0   1.0   1.0  0.8  0.8  0.8  0.8 8316.440945
+
+Average simulation time per combination: 6995.5s (min 5397.3s, max 8334.8s)
+Total elapsed over 6 combinations: 41972.8s
+Saved results to /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi1_python/n72000/simulation_results.pkl
+Saved timings to /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi1_python/n72000/simulation_results_timings.csv
+
+==================================================================
+finished    : Tue Sep  1 11:59:44 EDT 2026
+elapsed     : 11h 39m 34s
+exit status : 0
+outputs     : simulation_results.pkl / .csv, simulation_results_timings.csv
+==================================================================

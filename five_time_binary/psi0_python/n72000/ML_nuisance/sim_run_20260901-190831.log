@@ -1,0 +1,35 @@
+==================================================================
+SNTTEM five-time-point simulation (psi0, ML nuisances)
+==================================================================
+started     : Tue Sep  1 17:07:54 EDT 2026
+host        : HSPH-YVWHQMWMDV
+directory   : /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi0_python/n72000/ML_nuisance
+interpreter : /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/.venv/bin/python
+python      : 3.13.15 arm64
+packages    : numpy 2.5.2 | pandas 3.0.5 | scipy 1.18.1 | scikit-learn 1.9.0 | joblib 1.5.3 | matplotlib 3.11.1
+cores       : 12
+------------------------------------------------------------------
+settings (from run_simulation.py):
+  PSI05 = 0.0
+  PSI15 = 0.0
+  PSI25 = 0.0
+  PSI35 = 0.0
+  PSI45 = 0.0
+  N = 72000
+  N_ITER = 300
+  SEED = 3411
+  P_I_VALUES = [0.2, 1]
+  PH_VALUES = [0.3, 0.5, 0.8]
+==================================================================
+
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+
+============================================================
+[1/6] Running: p_I=(0.2, 0.2, 0.2, 0.2), ph=(0.3, 0.3, 0.3, 0.3)
+============================================================
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 11.5min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 45.9min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 87.2min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 99.2min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 21.4min

@@ -1,0 +1,107 @@
+==================================================================
+SNTTEM five-time-point simulation (psi1, ML nuisances)
+==================================================================
+started     : Tue Sep  1 20:41:10 EDT 2026
+host        : HSPH-YVWHQMWMDV
+directory   : /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi1_python/n72000/ML_nuisance
+interpreter : /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/.venv/bin/python
+python      : 3.13.15 arm64
+packages    : numpy 2.5.2 | pandas 3.0.5 | scipy 1.18.1 | scikit-learn 1.9.0 | joblib 1.5.3 | matplotlib 3.11.1
+cores       : 12
+------------------------------------------------------------------
+settings (from run_simulation.py):
+  PSI05 = 1.0
+  PSI15 = 1.0
+  PSI25 = 1.0
+  PSI35 = 1.0
+  PSI45 = 1.0
+  N = 72000
+  N_ITER = 300
+  SEED = 3411
+  P_I_VALUES = [0.2, 1]
+  PH_VALUES = [0.3, 0.5, 0.8]
+==================================================================
+
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+
+============================================================
+[1/6] Running: p_I=(0.2, 0.2, 0.2, 0.2), ph=(0.3, 0.3, 0.3, 0.3)
+============================================================
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 26.8min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 80.5min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 148.4min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 168.1min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 28.7min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 84.8min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 155.7min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 176.3min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 27.2min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 80.7min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 148.3min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 167.7min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 27.2min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 80.2min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 146.7min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 166.2min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 28.0min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 83.4min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 153.5min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 173.7min finished
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 26.2min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 78.3min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 144.5min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 164.0min finished
+Done in 10086.0s
+
+============================================================
+[2/6] Running: p_I=(0.2, 0.2, 0.2, 0.2), ph=(0.5, 0.5, 0.5, 0.5)
+============================================================
+Done in 10577.7s
+
+============================================================
+[3/6] Running: p_I=(0.2, 0.2, 0.2, 0.2), ph=(0.8, 0.8, 0.8, 0.8)
+============================================================
+Done in 10063.8s
+
+============================================================
+[4/6] Running: p_I=(1, 1, 1, 1), ph=(0.3, 0.3, 0.3, 0.3)
+============================================================
+Done in 9970.0s
+
+============================================================
+[5/6] Running: p_I=(1, 1, 1, 1), ph=(0.5, 0.5, 0.5, 0.5)
+============================================================
+Done in 10421.8s
+
+============================================================
+[6/6] Running: p_I=(1, 1, 1, 1), ph=(0.8, 0.8, 0.8, 0.8)
+============================================================
+Done in 9837.6s
+
+============================================================
+TIMING REPORT  (300 iterations per combination)
+============================================================
+ p_I1  p_I2  p_I3  p_I4  ph1  ph2  ph3  ph4      seconds
+  0.2   0.2   0.2   0.2  0.3  0.3  0.3  0.3 10085.964676
+  0.2   0.2   0.2   0.2  0.5  0.5  0.5  0.5 10577.709017
+  0.2   0.2   0.2   0.2  0.8  0.8  0.8  0.8 10063.809735
+  1.0   1.0   1.0   1.0  0.3  0.3  0.3  0.3  9969.986263
+  1.0   1.0   1.0   1.0  0.5  0.5  0.5  0.5 10421.788787
+  1.0   1.0   1.0   1.0  0.8  0.8  0.8  0.8  9837.595324
+
+Average simulation time per combination: 10159.5s (min 9837.6s, max 10577.7s)
+Total elapsed over 6 combinations: 60956.9s
+Saved results to /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi1_python/n72000/ML_nuisance/simulation_results.pkl
+Saved timings to /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi1_python/n72000/ML_nuisance/simulation_results_timings.csv
+
+==================================================================
+finished    : Wed Sep  2 13:37:09 EDT 2026
+elapsed     : 16h 55m 58s
+exit status : 0
+outputs     : simulation_results.pkl / .csv, simulation_results_timings.csv
+==================================================================
