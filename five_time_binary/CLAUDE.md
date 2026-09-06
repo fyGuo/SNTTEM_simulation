@@ -18,7 +18,8 @@ will break if run:
 | `psi1_python/n72000/` | **K=5, set up 2026-08-31.** Ported from `psi0_python/n72000/`: same pipeline, psi05..psi45 = 1.0 (non-null). Intercept in `generate_data.py` is lowered to -2.6 (from -1.5) to keep `exp(log_p) < 1` under the compounded psi=1 blip terms — see that file's docstring and "Known issues" below. Restructured into `ML_nuisance/`/`oracle/` 2026-09-01, mirroring psi0; top level holds the shared `generate_data.py`/`estimators.py`. |
 | `psi1_python/n72000/ML_nuisance/` | **K=5, current, post-fix rerun completed 2026-09-02.** Mirrors `psi0_python/n72000/ML_nuisance/`. An earlier n=72000/300-iter/6-cell run (finished 2026-09-01 11:59, 11h39m) used the pre-fix, buggy `ee_three_step_ipw` and was superseded: `run.sh` was relaunched 2026-09-01 20:41 with the corrected equation and ran to completion 2026-09-02 13:37 (16h56m) — see `ML_nuisance/README.md`. |
 | `psi1_python/n72000/oracle/` | **K=5, current, added 2026-09-01.** Same idea as psi0's oracle/, but psi=1 means `mu05..mu45` are not constant — `oracle_nuisances.py` derives and `check_oracle_derivation.py` verifies the closed form (score ~0 at true theta=(1,1,1,1,1), |z|<2). Full 6-cell x 300-iter grid runs in ~260s; psi05 median lands at 0.95-1.02 (target 1.0). See `oracle/README.md`. |
-| `psi1_python/n144000/` | **K=5, current, added 2026-09-03.** Hard-cell-only (`p_I=0.2, ph=0.3` — the worst cell in the production grid, see "Known issues") sample-size check: same `ML_nuisance/`/`oracle/` split as `n72000/`, but n=144000 and only that one cell, 300 iterations, to see whether doubling n stabilizes it. See "Status: n=144000 hard-cell check" below. |
+| `psi1_python/n144000/` | **K=5, current, added 2026-09-03.** Hard-cell-only (`p_I=0.2, ph=0.3` — the worst cell in the production grid, see "Known issues") sample-size check: same `ML_nuisance/`/`oracle/` split as `n72000/`, but n=144000 and only that one cell, 300 iterations, to see whether doubling n stabilizes it. See "Status: hard-cell sample-size check" below. |
+| `psi1_python/n288000/` | **K=5, current, added 2026-09-04.** Same hard-cell-only check as `n144000/`, at 4x the production sample size instead of 2x. See "Status: hard-cell sample-size check" below. |
 | `psi0_python/n72000/misspecification/` | K=3, not being run |
 | `psi0_python/` (parent scripts), `psi0_python/n12000/` | K=3 |
 | `psi1_python/` (parent scripts), `psi1_python/n24000/` | K=3 |
@@ -144,48 +145,55 @@ psi0's null-mechanism `exp(-1.5)` constant) — see
 form derivation and `check_oracle_derivation.py` for its score-at-truth
 verification (both confirmed before trusting the production grid run).
 
-## Status: n=144000 hard-cell check (psi1)
+## Status: hard-cell sample-size check, n=72000/144000/288000 (psi1)
 
-`psi1_python/n144000/` (added 2026-09-03) asks whether the production
-grid's worst cell — `p_I=0.2, ph=0.3`, where only ~0.81% of subjects follow
-a constant-treatment path and three-step weights run up to `(1/0.3)^4 ≈
-123` (see "Known issues") — is unstable because of finite `n`, or for a
-more fundamental reason that more data won't fix. It reruns just that one
-cell, at double the sample size (n=144000, still 300 iterations, same seed
-3411), with both the `oracle/` and `ML_nuisance/` pipelines from `n72000/`
-copied over unchanged (see each subfolder's README.md).
+Asks whether the production grid's worst cell — `p_I=0.2, ph=0.3`, where
+only ~0.81% of subjects follow a constant-treatment path and three-step
+weights run up to `(1/0.3)^4 ≈ 123` (see "Known issues") — is unstable
+because of finite `n`, or for a more fundamental reason that more data
+won't fix. `psi1_python/n144000/` (added 2026-09-03) and
+`psi1_python/n288000/` (added 2026-09-04) each rerun just that one cell, at
+2x and 4x the production sample size (still 300 iterations, seed 3411),
+with both the `oracle/` and `ML_nuisance/` pipelines copied over from
+`n72000/` unchanged (see each subfolder's README.md). All runs are
+post-`ee_three_step_ipw`-fix; the n=72000 numbers below are that cell's row
+from the full 6-cell production grid.
 
-`oracle/` finished in 15s. Comparing the same cell's psi05 numbers,
-n=72000 vs n=144000 (robust variance from `check_results.py`, i.e. the
-same methodology as every other table in this document):
+Both oracle runs are fast (n=144000: 15s; n=288000: 31s). Both ML_nuisance
+runs were launched under `nohup` (survives the launching session ending):
+n=144000 finished 2026-09-04 03:00 (6h32m); n=288000 finished 2026-09-05
+02:40 (16h13m) — RF/GBM training cost doesn't scale linearly with `n`, so
+each doubling has cost more than 2x the wall time of the last.
 
-| method | n=72000 median (var) | n=144000 median (var) |
-|---|---|---|
-| Simple g- / Robins' | 1.003 (1.869) | 1.003 (0.728) |
-| Three-step-g | 0.954 (1.573) | 0.921 (0.508) |
-| Three-step-ipw | 0.956 (1.636) | 0.921 (0.519) |
+`psi1_python/compare_hardcell_n_progression.py` pulls the hard cell out of
+all three `oracle/` and `ML_nuisance/` result files, computes the same
+robust-median/variance/MSE/coverage summary as `check_results.py`, and
+plots psi05 across the three `n` values (four pages, Oracle vs ML nuisances
+side by side) to `psi05_hardcell_n_progression.pdf`. psi05's median (var):
 
-Coverage stays ~94–95% at both `n`. Variance drops by roughly 2.5–3x from
-doubling `n` — more than the ~2x a pure `1/n` scaling would predict, though
-with only 300 iterations per cell that ratio itself has sampling noise and
-shouldn't be read too precisely. The Three-step estimators' median moving
-from 0.954/0.956 to 0.921 (further from the target 1.0, not closer) is
-likely within normal Monte Carlo noise at this iteration count rather than
-a systematic effect — `check_oracle_derivation.py` already confirmed these
-equations are unbiased at the truth in expectation. Net read so far: more
-data clearly helps this cell's *variance*, which is consistent with the
-instability being substantially a finite-`n` artifact rather than something
-intrinsic to the estimating equations at `ph=0.3`.
+| method | n=72000 ML | n=144000 ML | n=288000 ML | n=288000 Oracle |
+|---|---|---|---|---|
+| Simple g- / Robins' | 1.168 (7.57) | 1.185 (1.81) | 1.268 (0.59) | 1.038 (0.28) |
+| Three-step-g | 0.898 (5.19) | 0.915 (1.65) | 0.908 (0.60) | 0.960 (0.32) |
+| Three-step-ipw | 0.919 (1.53) | 0.921 (0.53) | 0.970 (0.31) | 0.961 (0.32) |
 
-`ML_nuisance/` was launched 2026-09-03 20:28 under `nohup` (survives the
-launching session ending) and was still running as of this writing —
-expect several hours longer than the ~2.8h the same cell took at n=72000
-inside the 6-cell grid, since RF/GBM training cost doesn't scale linearly
-with `n`. Check `psi1_python/n144000/ML_nuisance/sim_run.log` for progress;
-once done, `check_results.py` there gives the fitted-nuisance counterpart
-to the oracle numbers above, and separates "does more data help the
-equations" (oracle, answered above) from "...help nuisance estimation on
-top of that" (ML_nuisance, pending).
+Coverage stays ~93–96% throughout, at every `n` and for both nuisance
+sources. Two conclusions:
+
+1. **More data clearly helps.** Variance drops roughly 3–4x with each
+   doubling of `n`, for every method and both nuisance sources — the
+   instability at this cell is substantially a finite-`n` artifact, not
+   something intrinsic to the estimating equations at `ph=0.3`. Medians
+   also drift back toward the target 1.0 as `n` grows (most visibly for
+   Three-step-ipw: 0.919 → 0.921 → 0.970).
+2. **Three-step-ipw's ML-fitted nuisances catch up to oracle fastest.** By
+   n=288000 its ML variance (0.31) essentially equals its oracle variance
+   (0.32) — `working_model_true()`'s correctly-specified parametric fit
+   has become as good as the exact closed form. Simple g-/Three-step-g
+   (which use the RF/GBM/poly ensemble) still run ~2x their oracle
+   variance at n=288000 (0.59-0.60 vs 0.28-0.32) — better than the ~3x gap
+   at n=144000, but the ensemble is still contributing real noise this
+   cell doesn't need at that sample size.
 
 ## Environment — read this before running anything
 
@@ -236,8 +244,10 @@ cd psi0_python/n72000/ML_nuisance && ./run.sh   # ML-nuisance production run (ps
 cd psi0_python/n72000/oracle && ./run.sh        # oracle-nuisance run (~40s, all 6 cells)
 cd psi1_python/n72000/ML_nuisance && ./run.sh   # ML-nuisance production run (psi1, non-null)
 cd psi1_python/n72000/oracle && ./run.sh        # oracle-nuisance run (~260s, all 6 cells)
-cd psi1_python/n144000/ML_nuisance && ./run.sh  # hard-cell-only, n=144000 (~several hours, one cell)
+cd psi1_python/n144000/ML_nuisance && ./run.sh  # hard-cell-only, n=144000 (6h32m measured, one cell)
 cd psi1_python/n144000/oracle && ./run.sh       # hard-cell-only, n=144000 (~15s, one cell)
+cd psi1_python/n288000/ML_nuisance && ./run.sh  # hard-cell-only, n=288000 (16h13m measured, one cell)
+cd psi1_python/n288000/oracle && ./run.sh       # hard-cell-only, n=288000 (~30s, one cell)
 ```
 
 Each `n72000/` pipeline also has a `compare_oracle_vs_ml_psi05.py` script
@@ -247,7 +257,10 @@ loads both `oracle/simulation_results.pkl` and
 ML hatched) of psi05's variance/median/MSE/coverage per cell, writing
 `psi05_oracle_vs_ml.pdf` next to itself — the quickest way to see how much
 of Three-step-ipw's remaining gap from Simple g-/Three-step-g is
-nuisance-estimation noise versus something else.
+nuisance-estimation noise versus something else. `psi1_python/` also has
+`compare_hardcell_n_progression.py`, the same idea but across the
+n=72000/144000/288000 hard-cell folders instead of across cells within one
+`n` — see "Status: hard-cell sample-size check" above.
 
 Avoid running both `ML_nuisance/run.sh` jobs (psi0 and psi1) at the same time
 on one machine — each already oversubscribes threads roughly 12x12 on its

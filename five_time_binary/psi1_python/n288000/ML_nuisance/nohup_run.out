@@ -1,0 +1,52 @@
+==================================================================
+SNTTEM five-time-point simulation (psi1, ML nuisances)
+==================================================================
+started     : Fri Sep  4 10:27:12 EDT 2026
+host        : HSPH-YVWHQMWMDV
+directory   : /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi1_python/n288000/ML_nuisance
+interpreter : /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/.venv/bin/python
+python      : 3.13.15 arm64
+packages    : numpy 2.5.2 | pandas 3.0.5 | scipy 1.18.1 | scikit-learn 1.9.0 | joblib 1.5.3 | matplotlib 3.11.1
+cores       : 12
+------------------------------------------------------------------
+settings (from run_simulation.py):
+  PSI05 = 1.0
+  PSI15 = 1.0
+  PSI25 = 1.0
+  PSI35 = 1.0
+  PSI45 = 1.0
+  N = 288000
+  N_ITER = 300
+  SEED = 3411
+  P_I_VALUES = [0.2]
+  PH_VALUES = [0.3]
+==================================================================
+
+[Parallel(n_jobs=-1)]: Using backend LokyBackend with 12 concurrent workers.
+
+============================================================
+[1/1] Running: p_I=(0.2, 0.2, 0.2, 0.2), ph=(0.3, 0.3, 0.3, 0.3)
+============================================================
+[Parallel(n_jobs=-1)]: Done  48 tasks      | elapsed: 150.4min
+[Parallel(n_jobs=-1)]: Done 138 tasks      | elapsed: 463.3min
+[Parallel(n_jobs=-1)]: Done 264 tasks      | elapsed: 862.4min
+[Parallel(n_jobs=-1)]: Done 300 out of 300 | elapsed: 972.7min finished
+Done in 58364.8s
+
+============================================================
+TIMING REPORT  (300 iterations per combination)
+============================================================
+ p_I1  p_I2  p_I3  p_I4  ph1  ph2  ph3  ph4      seconds
+  0.2   0.2   0.2   0.2  0.3  0.3  0.3  0.3 58364.764863
+
+Average simulation time per combination: 58364.8s (min 58364.8s, max 58364.8s)
+Total elapsed over 1 combinations: 58364.8s
+Saved results to /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi1_python/n288000/ML_nuisance/simulation_results.pkl
+Saved timings to /Users/fug183/PhD_thesis/Thesis_1_SNTTEM/Codes/five_time_binary/psi1_python/n288000/ML_nuisance/simulation_results_timings.csv
+
+==================================================================
+finished    : Sat Sep  5 02:39:59 EDT 2026
+elapsed     : 16h 12m 46s
+exit status : 0
+outputs     : simulation_results.pkl / .csv, simulation_results_timings.csv
+==================================================================
