@@ -2,9 +2,10 @@
 
 Loads simulation_results.pkl from n72000/, n144000/, and n288000/ (both
 oracle/ and ML_nuisance/ subfolders), restricts to the hard cell in each,
-and plots grouped bars of Simple g-/Three-step-g/Three-step-ipw, each shown
-twice (Oracle vs ML nuisances), with columns for n=72000/144000/288000 --
-four pages (variance, median, MSE, coverage), one psi05-only PDF.
+and plots grouped bars of Simple g-/Three-step-g/Weighted regression, each
+shown twice (Oracle vs Super-learner nuisances), with columns for
+n=72000/144000/288000 -- four pages (variance, median, MSE, coverage), one
+psi05-only PDF.
 
 n72000's pkls hold the full 6-cell production grid, so those two are
 filtered down to the hard cell; n144000's and n288000's pkls already hold
@@ -28,13 +29,13 @@ N_VALUES = [72000, 144000, 288000]
 
 METHOD_MAP = {
     "Three-step-g": "Three-step-g estimator",
-    "Three-step-ipw": "Three-step-ipw estimator",
+    "Three-step-ipw": "Weighted regression estimator",
     "Robins' estimator": "Simple g-estimator",
 }
 METHODS = [
     "Simple g-estimator",
     "Three-step-g estimator",
-    "Three-step-ipw estimator",
+    "Weighted regression estimator",
 ]
 
 FAIL_THRESH = 10.0
@@ -85,13 +86,13 @@ def summarize(df, psi_param, true_psi=TRUE_PSI):
     )
 
 
-# Method colors (matching check_results.py); Oracle = solid, ML = hatched.
+# Method colors (matching check_results.py); Oracle = solid, Super-learner = hatched.
 COLORS = {"Simple g-estimator": "#3B4992",
           "Three-step-g estimator": "#EE0000",
-          "Three-step-ipw estimator": "#008B45"}
-SOURCES = ["Oracle", "ML"]
-HATCH = {"Oracle": "", "ML": "///"}
-ALPHA = {"Oracle": 0.9, "ML": 0.55}
+          "Weighted regression estimator": "#008B45"}
+SOURCES = ["Oracle", "Super-learner"]
+HATCH = {"Oracle": "", "Super-learner": "///"}
+ALPHA = {"Oracle": 0.9, "Super-learner": 0.55}
 
 
 def plot_one_metric(summary, metric, title, pdf):
@@ -148,7 +149,7 @@ def main():
     for n_val in N_VALUES:
         folder = f"n{n_val}"
         frames.append(load("Oracle", n_val, os.path.join(HERE, folder, "oracle", "simulation_results.pkl")))
-        frames.append(load("ML", n_val, os.path.join(HERE, folder, "ML_nuisance", "simulation_results.pkl")))
+        frames.append(load("Super-learner", n_val, os.path.join(HERE, folder, "ML_nuisance", "simulation_results.pkl")))
     df = pd.concat(frames, ignore_index=True)
     df = df[df["method"].isin(METHODS)]
 
@@ -158,10 +159,10 @@ def main():
 
     g = r"\psi_{05}"
     metrics = [
-        ("var",      rf"Empirical variance of ${g}$ at the hard cell — Oracle vs ML nuisances"),
-        ("mean",     rf"Empirical median of ${g}$ at the hard cell — Oracle vs ML nuisances"),
-        ("mse",      rf"Empirical MSE of ${g}$ at the hard cell — Oracle vs ML nuisances"),
-        ("coverage", rf"Empirical coverage of ${g}$ at the hard cell — Oracle vs ML nuisances"),
+        ("var",      rf"Empirical variance of ${g}$ at the hard cell — Oracle vs Super-learner nuisances"),
+        ("mean",     rf"Empirical median of ${g}$ at the hard cell — Oracle vs Super-learner nuisances"),
+        ("mse",      rf"Empirical MSE of ${g}$ at the hard cell — Oracle vs Super-learner nuisances"),
+        ("coverage", rf"Empirical coverage of ${g}$ at the hard cell — Oracle vs Super-learner nuisances"),
     ]
     with PdfPages(OUTPUT_PATH) as pdf:
         for metric, title in metrics:

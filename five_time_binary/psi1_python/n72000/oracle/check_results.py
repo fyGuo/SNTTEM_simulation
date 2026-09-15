@@ -40,7 +40,7 @@ def load_results(path=RESULTS_PATH):
 def rename_methods(df):
     method_map = {
         "Three-step-g": "Three-step-g estimator",
-        "Three-step-ipw": "Three-step-ipw estimator",
+        "Three-step-ipw": "Weighted regression estimator",
         "Robins' estimator": "Simple g-estimator",
         "eff": "Semiparametric efficient estimator",
     }
@@ -113,7 +113,7 @@ COLORS = ["#3B4992", "#EE0000", "#008B45", "#631879"]
 METHODS = [
     "Simple g-estimator",
     "Three-step-g estimator",
-    "Three-step-ipw estimator",
+    "Weighted regression estimator",
 ]
 
 

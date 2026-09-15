@@ -1,0 +1,53 @@
+\documentclass{article}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\begin{document}
+
+\begin{table}[ht]
+\centering
+\caption{Empirical median, variance, and MSE of $\psi_{05}$ --- Oracle vs Super-learner nuisances}
+\begin{tabular}{ll l l r r r}
+\toprule
+pI & $ph$ & Method & Source & Median & Variance & MSE \\
+\midrule
+0.2 & 0.3 & Simple g-estimator & Oracle & -0.005 & 0.347 & 0.347 \\
+0.2 & 0.3 & Simple g-estimator & Super-learner & -0.054 & 0.635 & 0.638 \\
+0.2 & 0.3 & Three-step-g estimator & Oracle & 0.012 & 0.506 & 0.506 \\
+0.2 & 0.3 & Three-step-g estimator & Super-learner & -0.027 & 1.194 & 1.194 \\
+0.2 & 0.3 & Weighted regression estimator & Oracle & 0.011 & 0.515 & 0.515 \\
+0.2 & 0.3 & Weighted regression estimator & Super-learner & 0.009 & 0.514 & 0.514 \\
+0.2 & 0.5 & Simple g-estimator & Oracle & 0.000 & 0.034 & 0.034 \\
+0.2 & 0.5 & Simple g-estimator & Super-learner & 0.003 & 0.054 & 0.054 \\
+0.2 & 0.5 & Three-step-g estimator & Oracle & 0.001 & 0.046 & 0.046 \\
+0.2 & 0.5 & Three-step-g estimator & Super-learner & -0.023 & 0.079 & 0.080 \\
+0.2 & 0.5 & Weighted regression estimator & Oracle & 0.001 & 0.046 & 0.046 \\
+0.2 & 0.5 & Weighted regression estimator & Super-learner & 0.004 & 0.047 & 0.048 \\
+0.2 & 0.8 & Simple g-estimator & Oracle & -0.001 & 0.009 & 0.009 \\
+0.2 & 0.8 & Simple g-estimator & Super-learner & -0.001 & 0.010 & 0.010 \\
+0.2 & 0.8 & Three-step-g estimator & Oracle & 0.005 & 0.008 & 0.008 \\
+0.2 & 0.8 & Three-step-g estimator & Super-learner & -0.003 & 0.012 & 0.012 \\
+0.2 & 0.8 & Weighted regression estimator & Oracle & 0.005 & 0.008 & 0.008 \\
+0.2 & 0.8 & Weighted regression estimator & Super-learner & 0.008 & 0.008 & 0.008 \\
+1 & 0.3 & Simple g-estimator & Oracle & 0.023 & 0.026 & 0.027 \\
+1 & 0.3 & Simple g-estimator & Super-learner & 0.020 & 0.122 & 0.122 \\
+1 & 0.3 & Three-step-g estimator & Oracle & 0.012 & 0.506 & 0.506 \\
+1 & 0.3 & Three-step-g estimator & Super-learner & -0.029 & 1.219 & 1.220 \\
+1 & 0.3 & Weighted regression estimator & Oracle & 0.011 & 0.515 & 0.515 \\
+1 & 0.3 & Weighted regression estimator & Super-learner & 0.009 & 0.514 & 0.514 \\
+1 & 0.5 & Simple g-estimator & Oracle & -0.001 & 0.013 & 0.013 \\
+1 & 0.5 & Simple g-estimator & Super-learner & -0.008 & 0.018 & 0.018 \\
+1 & 0.5 & Three-step-g estimator & Oracle & 0.001 & 0.046 & 0.046 \\
+1 & 0.5 & Three-step-g estimator & Super-learner & -0.013 & 0.079 & 0.079 \\
+1 & 0.5 & Weighted regression estimator & Oracle & 0.001 & 0.046 & 0.046 \\
+1 & 0.5 & Weighted regression estimator & Super-learner & 0.004 & 0.047 & 0.048 \\
+1 & 0.8 & Simple g-estimator & Oracle & -0.000 & 0.006 & 0.006 \\
+1 & 0.8 & Simple g-estimator & Super-learner & -0.006 & 0.007 & 0.007 \\
+1 & 0.8 & Three-step-g estimator & Oracle & 0.005 & 0.008 & 0.008 \\
+1 & 0.8 & Three-step-g estimator & Super-learner & -0.002 & 0.011 & 0.011 \\
+1 & 0.8 & Weighted regression estimator & Oracle & 0.005 & 0.008 & 0.008 \\
+1 & 0.8 & Weighted regression estimator & Super-learner & 0.008 & 0.008 & 0.008 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\end{document}

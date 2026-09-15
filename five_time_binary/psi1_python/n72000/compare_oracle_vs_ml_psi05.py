@@ -2,9 +2,9 @@
 
 Loads both simulation_results.pkl files (oracle/: exact closed-form
 nuisances; ML_nuisance/: RF/GBM/poly ensemble) and plots, per (p_I, ph) cell,
-grouped bars of Three-step-g / Three-step-ipw / Robins', each shown twice
-(Oracle vs ML nuisances) -- four pages (variance, median, MSE, coverage), one
-psi05-only PDF.
+grouped bars of Three-step-g / Weighted regression / Robins', each shown twice
+(Oracle vs Super-learner nuisances) -- four pages (variance, median, MSE,
+coverage), one psi05-only PDF.
 
 Mirrors ../../psi0_python/n72000/compare_oracle_vs_ml_psi05.py with
 TRUE_PSI=1.0 for this (non-null) directory.
@@ -31,13 +31,13 @@ PH_COLS = ["ph1", "ph2", "ph3", "ph4"]
 
 METHOD_MAP = {
     "Three-step-g": "Three-step-g estimator",
-    "Three-step-ipw": "Three-step-ipw estimator",
+    "Three-step-ipw": "Weighted regression estimator",
     "Robins' estimator": "Simple g-estimator",
 }
 METHODS = [
     "Simple g-estimator",
     "Three-step-g estimator",
-    "Three-step-ipw estimator",
+    "Weighted regression estimator",
 ]
 
 FAIL_THRESH = 10.0
@@ -92,13 +92,13 @@ def _fmt(values, name):
     return f"{name}=({', '.join(f'{v:g}' for v in vals)})"
 
 
-# Method colors (matching check_results.py); Oracle = solid, ML = hatched.
+# Method colors (matching check_results.py); Oracle = solid, Super-learner = hatched.
 COLORS = {"Simple g-estimator": "#3B4992",
           "Three-step-g estimator": "#EE0000",
-          "Three-step-ipw estimator": "#008B45"}
-SOURCES = ["Oracle", "ML"]
-HATCH = {"Oracle": "", "ML": "///"}
-ALPHA = {"Oracle": 0.9, "ML": 0.55}
+          "Weighted regression estimator": "#008B45"}
+SOURCES = ["Oracle", "Super-learner"]
+HATCH = {"Oracle": "", "Super-learner": "///"}
+ALPHA = {"Oracle": 0.9, "Super-learner": 0.55}
 
 
 def plot_one_metric(summary, metric, title, pdf, pi_combos, ph_combos):
@@ -148,7 +148,7 @@ def plot_one_metric(summary, metric, title, pdf, pi_combos, ph_combos):
             ax.tick_params(labelsize=8)
             ax.grid(True, axis="y", linewidth=0.4, alpha=0.5)
 
-    # One shared legend for Oracle (solid) vs ML (hatched).
+    # One shared legend for Oracle (solid) vs Super-learner (hatched).
     from matplotlib.patches import Patch
     legend_handles = [
         Patch(facecolor="white", edgecolor="black", alpha=ALPHA[s], hatch=HATCH[s], label=s)
@@ -162,12 +162,12 @@ def plot_one_metric(summary, metric, title, pdf, pi_combos, ph_combos):
 
 def main():
     df_oracle = load("Oracle", os.path.join(HERE, "oracle", "simulation_results.pkl"))
-    df_ml = load("ML", os.path.join(HERE, "ML_nuisance", "simulation_results.pkl"))
+    df_ml = load("Super-learner", os.path.join(HERE, "ML_nuisance", "simulation_results.pkl"))
     df = pd.concat([df_oracle, df_ml], ignore_index=True)
     df = df[df["method"].isin(METHODS)]
 
     summary = summarize(df, PSI_PARAM)
-    print(f"===== {PSI_PARAM}: Oracle vs ML nuisances =====")
+    print(f"===== {PSI_PARAM}: Oracle vs Super-learner nuisances =====")
     print(summary.to_string(index=False))
 
     pi_combos = sorted(df[P_I_COLS].drop_duplicates().itertuples(index=False, name=None))
@@ -175,10 +175,10 @@ def main():
 
     g = r"\psi_{05}"
     metrics = [
-        ("var",      rf"Empirical variance of ${g}$ — Oracle vs ML nuisances"),
-        ("mean",     rf"Empirical median of ${g}$ — Oracle vs ML nuisances"),
-        ("mse",      rf"Empirical MSE of ${g}$ — Oracle vs ML nuisances"),
-        ("coverage", rf"Empirical coverage of ${g}$ — Oracle vs ML nuisances"),
+        ("var",      rf"Empirical variance of ${g}$ — Oracle vs Super-learner nuisances"),
+        ("mean",     rf"Empirical median of ${g}$ — Oracle vs Super-learner nuisances"),
+        ("mse",      rf"Empirical MSE of ${g}$ — Oracle vs Super-learner nuisances"),
+        ("coverage", rf"Empirical coverage of ${g}$ — Oracle vs Super-learner nuisances"),
     ]
     with PdfPages(OUTPUT_PATH) as pdf:
         for metric, title in metrics:
@@ -192,8 +192,8 @@ def main():
             "and the full-data covariate-plug-in working_model() change (mu05..mu45\n"
             "fit on the full cross-fitting fold with A_t as a covariate, rather than\n"
             "only the A_t==A_{t-1} subset) are both reflected here -- see CLAUDE.md.\n"
-            "Known residual gap: at ph=0.3, Simple g/Three-step-g's ML variance still\n"
-            "runs ~3-4x above Oracle (Three-step-ipw's plain-parametric nuisances track\n"
+            "Known residual gap: at ph=0.3, Simple g/Three-step-g's Super-learner variance\n"
+            "still runs ~3-4x above Oracle (Weighted regression's plain-parametric nuisances track\n"
             "Oracle closely everywhere). A matched n=144,000 check (40 iters, not yet\n"
             "at production 300-iter precision) did not show this gap closing with n.",
             fontsize=10, va="center",
